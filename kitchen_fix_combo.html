@@ -1,258 +1,483 @@
 <!doctype html>
 <html lang="bn" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>কিচেন ফিক্স কম্বো (৪-ইন-১) | prodhan.com</title>
-  <meta name="description" content="কিচেন ফিক্স কম্বো - রান্নাঘরের সব ঝামেলার সহজ সমাধান মাত্র ৯৯৯ টাকায়।" />
-  <link rel="icon" href="https://storage.biddabari.online/biddabari-bucket/uploads/all/4PCgKQGv93MGiJXMIdyMFGboRpRR2GV8YNam0JIE.webp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            bengali: ['"Anek Bangla"', 'sans-serif'],
-            display: ['"Plus Jakarta Sans"', 'sans-serif'],
-          }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>কিচেন ফিক্স কম্বো (৪-ইন-১) | prodhan.com</title>
+    <meta
+      name="description"
+      content="কিচেন ফিক্স কম্বো - রান্নাঘরের সব ঝামেলার সহজ সমাধান মাত্র ৯৯৯ টাকায়।"
+    />
+    <link
+      rel="icon"
+      href="https://storage.biddabari.online/biddabari-bucket/uploads/all/4PCgKQGv93MGiJXMIdyMFGboRpRR2GV8YNam0JIE.webp"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              bengali: ['"Anek Bangla"', "sans-serif"],
+              display: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+        font-family:
+          "Anek Bangla",
+          "Plus Jakarta Sans",
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+      }
+      body,
+      button,
+      input,
+      textarea,
+      select {
+        font-family:
+          "Anek Bangla", "Plus Jakarta Sans", system-ui, sans-serif !important;
+      }
+      .font-bengali {
+        font-family: "Anek Bangla", sans-serif;
+      }
+      .font-display {
+        font-family: "Plus Jakarta Sans", "Anek Bangla", sans-serif;
+      }
+      .tabular-nums {
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* ---------- Button animations (হালকা) ---------- */
+      @keyframes cta-pulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(139, 21, 21, 0.4);
+        }
+        50% {
+          box-shadow: 0 0 0 9px rgba(139, 21, 21, 0);
         }
       }
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; font-family: "Anek Bangla", "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-    body, button, input, textarea, select { font-family: "Anek Bangla", "Plus Jakarta Sans", system-ui, sans-serif !important; }
-    .font-bengali { font-family: "Anek Bangla", sans-serif; }
-    .font-display { font-family: "Plus Jakarta Sans", "Anek Bangla", sans-serif; }
-    .tabular-nums { font-variant-numeric: tabular-nums; }
+      @keyframes wa-pulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.45);
+        }
+        50% {
+          box-shadow: 0 0 0 9px rgba(5, 150, 105, 0);
+        }
+      }
+      @keyframes cta-shine {
+        0% {
+          transform: translateX(-150%) skewX(-20deg);
+        }
+        60%,
+        100% {
+          transform: translateX(350%) skewX(-20deg);
+        }
+      }
+      .cta-pulse,
+      .btn-wa {
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          background-color 0.2s ease;
+      }
+      .cta-pulse {
+        animation: cta-pulse 2.4s ease-in-out infinite;
+      }
+      .btn-wa.wa-pulse {
+        animation: wa-pulse 2.4s ease-in-out infinite;
+      }
+      .cta-pulse:hover,
+      .btn-wa:hover {
+        transform: translateY(-2px);
+      }
+      .cta-pulse:active,
+      .btn-wa:active {
+        transform: scale(0.97);
+      }
+      .cta-pulse::after,
+      .btn-wa.wa-pulse::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.35),
+          transparent
+        );
+        animation: cta-shine 3.6s ease-in-out infinite;
+        pointer-events: none;
+      }
+      .cta-pulse svg:last-child {
+        transition: transform 0.2s;
+      }
+      .cta-pulse:hover svg:last-child {
+        transform: translateX(4px);
+      }
 
-    /* ---------- Button animations (হালকা) ---------- */
-    @keyframes cta-pulse {
-      0%,100% { box-shadow: 0 0 0 0 rgba(139,21,21,.40); }
-      50%     { box-shadow: 0 0 0 9px rgba(139,21,21,0); }
-    }
-    @keyframes wa-pulse {
-      0%,100% { box-shadow: 0 0 0 0 rgba(5,150,105,.45); }
-      50%     { box-shadow: 0 0 0 9px rgba(5,150,105,0); }
-    }
-    @keyframes cta-shine {
-      0%       { transform: translateX(-150%) skewX(-20deg); }
-      60%,100% { transform: translateX(350%) skewX(-20deg); }
-    }
-    .cta-pulse, .btn-wa {
-      position: relative; overflow: hidden;
-      transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
-    }
-    .cta-pulse { animation: cta-pulse 2.4s ease-in-out infinite; }
-    .btn-wa.wa-pulse { animation: wa-pulse 2.4s ease-in-out infinite; }
-    .cta-pulse:hover, .btn-wa:hover { transform: translateY(-2px); }
-    .cta-pulse:active, .btn-wa:active { transform: scale(.97); }
-    .cta-pulse::after, .btn-wa.wa-pulse::after {
-      content: ""; position: absolute; top: 0; left: 0; width: 35%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
-      animation: cta-shine 3.6s ease-in-out infinite; pointer-events: none;
-    }
-    .cta-pulse svg:last-child { transition: transform .2s; }
-    .cta-pulse:hover svg:last-child { transform: translateX(4px); }
+      #phone-group.phone-error {
+        border-color: #e11d48;
+        box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.08);
+      }
 
-    #phone-group.phone-error {
-      border-color: #e11d48;
-      box-shadow: 0 0 0 3px rgba(225, 29, 72, .08);
-    }
+      @media (prefers-reduced-motion: reduce) {
+        .cta-pulse,
+        .btn-wa,
+        .cta-pulse::after,
+        .btn-wa::after {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
 
-    @media (prefers-reduced-motion: reduce) {
-      .cta-pulse, .btn-wa, .cta-pulse::after, .btn-wa::after { animation: none !important; transition: none !important; }
-    }
-  </style>
-</head>
-<body class="bg-[#faf8f5] text-stone-800 antialiased selection:bg-red-800 selection:text-white font-bengali">
-  <div id="app"></div>
+.faq-item {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.faq-item:has(.faq-body:not(.hidden)) {
+  border-color: rgba(139, 21, 21, 0.4);
+  box-shadow: 0 8px 22px -12px rgba(139, 21, 21, 0.35);
+}
+.faq-item:has(.faq-body:not(.hidden)) .faq-num {
+  background: #8b1515;
+  color: #fff;
+}
 
-<script>
-/* =========================================================
+@keyframes modal-pop {
+  0% { opacity: 0; transform: translateY(16px) scale(0.96); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.modal-card { animation: modal-pop 0.25s ease-out; }
+
+    </style>
+  </head>
+  <body
+    class="bg-[#faf8f5] text-stone-800 antialiased selection:bg-red-800 selection:text-white font-bengali"
+  >
+    <div id="app"></div>
+
+    <script>
+      /* =========================================================
    DATA — শুধু এই অংশ বদলালেই পুরো পেজ বদলে যাবে
    ========================================================= */
-const DATA = {
-  brand: {
-    name: "প্রধান",
-    logo: "https://storage.biddabari.online/biddabari-bucket/uploads/all/9qz4cAe0HhgiQIbXSOOgm3JpVRU0M2bWyelwfijt.webp",
-    domain: "prodhan.com",
-    website: "https://www.prodhan.com",
-    phone: "+880 9643-330000",
-    phoneHref: "+8809643330000",
-    whatsapp: "8801894842442",
-    whatsappDisplay: "01894842442",
-    location: "ঢাকা, বাংলাদেশ",
-    about: "বিশ্বাস, মানসম্মত পণ্য ও দ্রুত ডেলিভারির মাধ্যমে সারাদেশের গ্রাহকদের আস্থার প্রতিষ্ঠান। সঠিক দামে নির্ভরযোগ্য পণ্য ও আন্তরিক সেবা নিশ্চিত করাই আমাদের অঙ্গীকার।",
-    copyright: "Copyright © 2026 prodhan. All rights reserved"
+      const DATA = {
+        brand: {
+          name: "প্রধান",
+          logo: "https://storage.biddabari.online/biddabari-bucket/uploads/all/9qz4cAe0HhgiQIbXSOOgm3JpVRU0M2bWyelwfijt.webp",
+          domain: "prodhan.com",
+          website: "https://www.prodhan.com",
+          phone: "+880 9643-330000",
+          phoneHref: "+8809643330000",
+          whatsapp: "8801894842442",
+          whatsappDisplay: "01894842442",
+          location: "ঢাকা, বাংলাদেশ",
+          about:
+            "বিশ্বাস, মানসম্মত পণ্য ও দ্রুত ডেলিভারির মাধ্যমে সারাদেশের গ্রাহকদের আস্থার প্রতিষ্ঠান। সঠিক দামে নির্ভরযোগ্য পণ্য ও আন্তরিক সেবা নিশ্চিত করাই আমাদের অঙ্গীকার।",
+          copyright: "Copyright © 2026 prodhan. All rights reserved",
+        },
+
+        product: {
+          title: "কিচেন ফিক্স কম্বো",
+          packLabel: "৪-ইন-১",
+          subtitle:
+            "অয়েল স্প্রে বোতল + ওয়াটারপ্রুফ অ্যাপ্রন + সিলিকন বেকিং ম্যাট + ফিশ ক্লিনার",
+          intro:
+            "রান্নাঘরে কাজ করতে গিয়ে তেল বেশি পড়ে যাওয়া, জামায় দাগ লাগা, আটা বেলার সময় ময়লা হওয়া কিংবা মাছের আঁশ ছাড়াতে হাত কেটে যাওয়ার মতো ঝামেলা প্রতিদিনই হয়। এই ৪-ইন-১ কম্বো সেসব ঝামেলার সহজ সমাধান নিয়ে এসেছে, একদম সাশ্রয়ী দামে।",
+          offerPrice: 999,
+          regularPrice: 1088,
+          ctaText: "অর্ডার করতে আজই ক্লিক করুন",
+          stockText: "স্টক শেষ হওয়ার আগেই অর্ডার করুন!",
+          codText: "ক্যাশ অন ডেলিভারি",
+        },
+
+        images: {
+          combo:
+            "https://storage.biddabari.online/biddabari-bucket/uploads/all/prodhan_asset/ktchen_fix_combo_asset/combo.webp",
+          oil: "https://storage.biddabari.online/biddabari-bucket/uploads/all/prodhan_asset/ktchen_fix_combo_asset/oil_spray.webp",
+          apron:
+            "https://storage.biddabari.online/biddabari-bucket/uploads/all/prodhan_asset/ktchen_fix_combo_asset/apron.webp",
+          mat: "https://storage.biddabari.online/biddabari-bucket/uploads/all/prodhan_asset/ktchen_fix_combo_asset/baking_mat.webp",
+          cleaner:
+            "https://storage.biddabari.online/biddabari-bucket/uploads/all/prodhan_asset/ktchen_fix_combo_asset/fish_cleaner.webp",
+        },
+
+        gallery: [
+          { label: "কম্বো", image: "combo" },
+          { label: "তেল স্প্রে", image: "oil" },
+          { label: "অ্যাপ্রন", image: "apron" },
+          { label: "বেকিং ম্যাট", image: "mat" },
+          { label: "ফিশ ক্লিনার", image: "cleaner" },
+        ],
+
+        delivery: [
+          { id: "inside", label: "ঢাকার ভিতরে", charge: 60 },
+          { id: "outside", label: "ঢাকার বাইরে (সারাদেশ)", charge: 110 },
+        ],
+
+        trust: [
+          {
+            icon: "truck",
+            title: "হোম ডেলিভারি",
+            text: "সারা দেশে দ্রুত পৌঁছে যায়",
+          },
+          {
+            icon: "package",
+            title: "দেখে নেওয়ার সুযোগ",
+            text: "পণ্য চেক করে মূল্য দিন",
+          },
+          {
+            icon: "rotate",
+            title: "সহজ রিটার্ন",
+            text: "সমস্যা থাকলে রিপ্লেসমেন্ট",
+          },
+        ],
+
+        // combo: [
+        //   { name: "অয়েল স্প্রে বোতল (গ্লাস)", qty: "১ পিস" },
+        //   { name: "ওয়াটারপ্রুফ অ্যাপ্রন", qty: "১ পিস" },
+        //   { name: "সিলিকন বেকিং ম্যাট", qty: "১ পিস" },
+        //   { name: "ফিশ ক্লিনার (মাছের আঁশ ছাড়ানোর টুল)", qty: "১ পিস" },
+        // ],
+        combo: [
+  { name: "অয়েল স্প্রে বোতল (গ্লাস)", qty: "১ পিস", image: "oil" },
+  { name: "ওয়াটারপ্রুফ অ্যাপ্রন", qty: "১ পিস", image: "apron" },
+  { name: "সিলিকন বেকিং ম্যাট", qty: "১ পিস", image: "mat" },
+  { name: "ফিশ ক্লিনার (মাছের আঁশ ছাড়ানোর টুল)", qty: "১ পিস", image: "cleaner" },
+],
+
+        features: [
+          {
+            title: "অয়েল স্প্রে বোতল (গ্লাস)",
+            image: "oil",
+            badge: "১ পিস",
+            points: [
+              "স্প্রে ও ঢেলে দেওয়া, দুই পদ্ধতিতেই ব্যবহার করা যায়",
+              "অল্প তেলে সমানভাবে ছড়ায়, তাই তেল কম লাগে",
+              "এয়ার ফ্রায়ার, সালাদ, গ্রিলিং ও ভাজার জন্য উপযোগী",
+              "স্বচ্ছ গ্লাস বডি, তাই ভেতরে তেল কতটুকু আছে দেখা যায়",
+              "হাতল থাকায় ধরা সহজ",
+            ],
+          },
+          {
+            title: "ওয়াটারপ্রুফ অ্যাপ্রন",
+            image: "apron",
+            badge: "১ পিস",
+            points: [
+              "পানি, তেল ও মসলার দাগ থেকে জামা বাঁচায়",
+              "সহজে মুছে পরিষ্কার করা যায়",
+              "সামনে পকেট থাকায় ছোট জিনিস রাখা যায়",
+              "অ্যাডজাস্টেবল স্ট্র্যাপ",
+            ],
+          },
+          {
+            title: "সিলিকন বেকিং ম্যাট",
+            image: "mat",
+            badge: "১ পিস",
+            points: [
+              "রুটি, পরোটা, পিজ্জা ও কেকের ডো বেলার জন্য আদর্শ",
+              "নন-স্টিক পৃষ্ঠ, তাই আটা লেগে যায় না",
+              "গায়ে মাপের দাগ ও গোল গাইড থাকায় সঠিক মাপে বেলা সহজ",
+              "ধুয়ে বারবার ব্যবহার করা যায়",
+            ],
+          },
+          {
+            title: "ফিশ ক্লিনার (মাছের আঁশ ছাড়ানোর টুল)",
+            image: "cleaner",
+            badge: "১ পিস",
+            points: [
+              "মাছের আঁশ দ্রুত ও সহজে ছাড়ানো যায়",
+              "স্টেইনলেস স্টিলের মজবুত বডি",
+              "ছুরির চেয়ে নিরাপদ, আঁশ ছিটকে কম পড়ে",
+              "হ্যান্ডেল শক্ত করে ধরা যায়",
+            ],
+          },
+        ],
+
+        why: [
+          {
+            title: "চারটি দরকারি পণ্য একসাথে",
+            text: "৪টি অত্যন্ত কাজের কিচেন আইটেম এখন পাচ্ছেন মাত্র ৯৯৯ টাকায়।",
+          },
+          {
+            title: "সরাসরি টাকা সাশ্রয়",
+            text: "আলাদা কিনলে ১,০৮৮ টাকা লাগত, কিন্তু এই কম্বোতে এখন পাচ্ছেন মাত্র ৯৯৯ টাকায়।",
+          },
+          {
+            title: "সহজ ও পরিচ্ছন্ন কাজ",
+            text: "রান্নাঘরের প্রতিদিনের কাজ হবে অনেক দ্রুত, সহজ ও পরিচ্ছন্ন।",
+          },
+          {
+            title: "সবার জন্য আদর্শ",
+            text: "গৃহিণী, শেফ ও নতুন সংসারের জন্য এটি একটি পারফেক্ট কিচেন সেট।",
+          },
+          {
+            title: "উপহার দেওয়ার জন্যও দারুণ",
+            icon: "gift",
+            wide: true,
+            text: "পরিবার, আত্মীয়-স্বজন বা নতুন সংসারে উপহার দেওয়ার জন্য চমৎকার ও অত্যন্ত প্রয়োজনীয় একটি কম্বো প্যাক।",
+          },
+        ],
+
+        reviews: [
+          {
+            name: "সাদিয়া আফরোজ",
+            place: "ধানমন্ডি, ঢাকা",
+            rating: 5,
+            text: "অয়েল স্প্রে বোতলটা একদম পারফেক্ট। গ্রিলিং ও সালাদে তেল অনেক কম লাগে। অ্যাপ্রনটাও দাগ লাগার চিন্তা দূর করেছে।",
+          },
+          {
+            name: "মাহমুদুল হাসান",
+            place: "খুলনা সদর",
+            rating: 5,
+            text: "ফিশ ক্লিনার দিয়ে মাছের আঁশ ছাড়ানো সত্যিই খুব সহজ ও নিরাপদ। হাতে কাটার ভয় থাকে না। ৯৯৯ টাকায় দারুণ কম্বো।",
+          },
+          {
+            name: "রোকেয়া বেগম",
+            place: "জিইসি, চট্টগ্রাম",
+            rating: 5,
+            text: "সিলিকন বেকিং ম্যাটের মাপ দেখে রুটি একদম গোল হয়। টেবিল নোংরা হয় না। প্রতিটা আইটেমই কাজের।",
+          },
+          {
+            name: "ফারহানা ইসলাম",
+            place: "রাজশাহী",
+            rating: 5,
+            text: "প্যাকেজিং খুব সুন্দর ছিল। পণ্য দেখে ডেলিভারিম্যানকে টাকা দিয়েছি। prodhan.com-এর ব্যবহারে মুগ্ধ।",
+          },
+        ],
+        ratingText: "৫ তারকার নির্ভরযোগ্য রেটিং",
+
+        faq: [
+  {
+    q: "ডেলিভারি পেতে কতদিন সময় লাগবে?",
+    a: "ঢাকার ভিতরে ২৪ থেকে ৪৮ ঘণ্টা এবং ঢাকার বাইরে ২ থেকে ৩ কার্যদিবসের মধ্যে সারা দেশে হোম ডেলিভারি পৌঁছে দেওয়া হয়।",
   },
-
-  product: {
-    title: "কিচেন ফিক্স কম্বো",
-    packLabel: "৪-ইন-১",
-    subtitle: "অয়েল স্প্রে বোতল + ওয়াটারপ্রুফ অ্যাপ্রন + সিলিকন বেকিং ম্যাট + ফিশ ক্লিনার",
-    intro: "রান্নাঘরে কাজ করতে গিয়ে তেল বেশি পড়ে যাওয়া, জামায় দাগ লাগা, আটা বেলার সময় ময়লা হওয়া কিংবা মাছের আঁশ ছাড়াতে হাত কেটে যাওয়ার মতো ঝামেলা প্রতিদিনই হয়। এই ৪-ইন-১ কম্বো সেসব ঝামেলার সহজ সমাধান নিয়ে এসেছে, একদম সাশ্রয়ী দামে।",
-    offerPrice: 999,
-    regularPrice: 1088,
-    ctaText: "অর্ডার করতে আজই ক্লিক করুন",
-    stockText: "স্টক শেষ হওয়ার আগেই অর্ডার করুন!",
-    codText: "ক্যাশ অন ডেলিভারি"
+  {
+    q: "অগ্রিম কোনো টাকা দিতে হবে?",
+    a: "না, অগ্রিম কোনো টাকা লাগবে না। ডেলিভারিম্যানের কাছ থেকে পণ্য হাতে পেয়ে মূল্য পরিশোধ করবেন (ক্যাশ অন ডেলিভারি)।",
   },
-
-  images: {
-    combo:   "https://storage.biddabari.online/biddabari-bucket/uploads/all/prodhan_asset/ktchen_fix_combo_asset/combo.webp",
-    oil:     "https://storage.biddabari.online/biddabari-bucket/uploads/all/prodhan_asset/ktchen_fix_combo_asset/oil_spray.webp",
-    apron:   "https://storage.biddabari.online/biddabari-bucket/uploads/all/prodhan_asset/ktchen_fix_combo_asset/apron.webp",
-    mat:     "https://storage.biddabari.online/biddabari-bucket/uploads/all/prodhan_asset/ktchen_fix_combo_asset/baking_mat.webp",
-    cleaner: "https://storage.biddabari.online/biddabari-bucket/uploads/all/prodhan_asset/ktchen_fix_combo_asset/fish_cleaner.webp"
+  {
+    q: "পণ্য দেখার সুযোগ আছে কি?",
+    a: "হ্যাঁ, ডেলিভারিম্যানের সামনে পণ্য দেখে নিয়ে তারপর টাকা পরিশোধ করতে পারবেন।",
   },
+  {
+    q: "পণ্যে সমস্যা থাকলে কী করব?",
+    a: "ডেলিভারির সময় পণ্য চেক করে নিন। কোনো সমস্যা থাকলে আমাদের WhatsApp বা হটলাইনে জানালে রিপ্লেসমেন্টের ব্যবস্থা করা হবে।",
+  },
+],
+      };
 
-  gallery: [
-    { label: "কম্বো",        image: "combo" },
-    { label: "তেল স্প্রে",   image: "oil" },
-    { label: "অ্যাপ্রন",      image: "apron" },
-    { label: "বেকিং ম্যাট",  image: "mat" },
-    { label: "ফিশ ক্লিনার",  image: "cleaner" }
-  ],
-
-  delivery: [
-    { id: "inside",  label: "ঢাকার ভিতরে",            charge: 60 },
-    { id: "outside", label: "ঢাকার বাইরে (সারাদেশ)", charge: 110 }
-  ],
-
-  trust: [
-    { icon: "truck",   title: "হোম ডেলিভারি",     text: "সারা দেশে দ্রুত পৌঁছে যায়" },
-    { icon: "package", title: "দেখে নেওয়ার সুযোগ", text: "পণ্য চেক করে মূল্য দিন" },
-    { icon: "rotate",  title: "সহজ রিটার্ন",       text: "সমস্যা থাকলে রিপ্লেসমেন্ট" }
-  ],
-
-  combo: [
-    { name: "অয়েল স্প্রে বোতল (গ্লাস)",                 qty: "১ পিস" },
-    { name: "ওয়াটারপ্রুফ অ্যাপ্রন",                      qty: "১ পিস" },
-    { name: "সিলিকন বেকিং ম্যাট",                        qty: "১ পিস" },
-    { name: "ফিশ ক্লিনার (মাছের আঁশ ছাড়ানোর টুল)",     qty: "১ পিস" }
-  ],
-
-  features: [
-    { title: "অয়েল স্প্রে বোতল (গ্লাস)", image: "oil", badge: "১ পিস", points: [
-      "স্প্রে ও ঢেলে দেওয়া, দুই পদ্ধতিতেই ব্যবহার করা যায়",
-      "অল্প তেলে সমানভাবে ছড়ায়, তাই তেল কম লাগে",
-      "এয়ার ফ্রায়ার, সালাদ, গ্রিলিং ও ভাজার জন্য উপযোগী",
-      "স্বচ্ছ গ্লাস বডি, তাই ভেতরে তেল কতটুকু আছে দেখা যায়",
-      "হাতল থাকায় ধরা সহজ"
-    ]},
-    { title: "ওয়াটারপ্রুফ অ্যাপ্রন", image: "apron", badge: "১ পিস", points: [
-      "পানি, তেল ও মসলার দাগ থেকে জামা বাঁচায়",
-      "সহজে মুছে পরিষ্কার করা যায়",
-      "সামনে পকেট থাকায় ছোট জিনিস রাখা যায়",
-      "অ্যাডজাস্টেবল স্ট্র্যাপ"
-    ]},
-    { title: "সিলিকন বেকিং ম্যাট", image: "mat", badge: "১ পিস", points: [
-      "রুটি, পরোটা, পিজ্জা ও কেকের ডো বেলার জন্য আদর্শ",
-      "নন-স্টিক পৃষ্ঠ, তাই আটা লেগে যায় না",
-      "গায়ে মাপের দাগ ও গোল গাইড থাকায় সঠিক মাপে বেলা সহজ",
-      "ধুয়ে বারবার ব্যবহার করা যায়"
-    ]},
-    { title: "ফিশ ক্লিনার (মাছের আঁশ ছাড়ানোর টুল)", image: "cleaner", badge: "১ পিস", points: [
-      "মাছের আঁশ দ্রুত ও সহজে ছাড়ানো যায়",
-      "স্টেইনলেস স্টিলের মজবুত বডি",
-      "ছুরির চেয়ে নিরাপদ, আঁশ ছিটকে কম পড়ে",
-      "হ্যান্ডেল শক্ত করে ধরা যায়"
-    ]}
-  ],
-
-  why: [
-    { title: "চারটি দরকারি পণ্য একসাথে", text: "৪টি অত্যন্ত কাজের কিচেন আইটেম এখন পাচ্ছেন মাত্র ৯৯৯ টাকায়।" },
-    { title: "সরাসরি টাকা সাশ্রয়",       text: "আলাদা কিনলে ১,০৮৮ টাকা লাগত, কিন্তু এই কম্বোতে এখন পাচ্ছেন মাত্র ৯৯৯ টাকায়।" },
-    { title: "সহজ ও পরিচ্ছন্ন কাজ",      text: "রান্নাঘরের প্রতিদিনের কাজ হবে অনেক দ্রুত, সহজ ও পরিচ্ছন্ন।" },
-    { title: "সবার জন্য আদর্শ",          text: "গৃহিণী, শেফ ও নতুন সংসারের জন্য এটি একটি পারফেক্ট কিচেন সেট।" },
-    { title: "উপহার দেওয়ার জন্যও দারুণ", icon: "gift", wide: true,
-      text: "পরিবার, আত্মীয়-স্বজন বা নতুন সংসারে উপহার দেওয়ার জন্য চমৎকার ও অত্যন্ত প্রয়োজনীয় একটি কম্বো প্যাক।" }
-  ],
-
-  reviews: [
-    { name: "সাদিয়া আফরোজ",  place: "ধানমন্ডি, ঢাকা",  rating: 5, text: "অয়েল স্প্রে বোতলটা একদম পারফেক্ট। গ্রিলিং ও সালাদে তেল অনেক কম লাগে। অ্যাপ্রনটাও দাগ লাগার চিন্তা দূর করেছে।" },
-    { name: "মাহমুদুল হাসান", place: "খুলনা সদর",       rating: 5, text: "ফিশ ক্লিনার দিয়ে মাছের আঁশ ছাড়ানো সত্যিই খুব সহজ ও নিরাপদ। হাতে কাটার ভয় থাকে না। ৯৯৯ টাকায় দারুণ কম্বো।" },
-    { name: "রোকেয়া বেগম",   place: "জিইসি, চট্টগ্রাম", rating: 5, text: "সিলিকন বেকিং ম্যাটের মাপ দেখে রুটি একদম গোল হয়। টেবিল নোংরা হয় না। প্রতিটা আইটেমই কাজের।" },
-    { name: "ফারহানা ইসলাম", place: "রাজশাহী",         rating: 5, text: "প্যাকেজিং খুব সুন্দর ছিল। পণ্য দেখে ডেলিভারিম্যানকে টাকা দিয়েছি। prodhan.com-এর ব্যবহারে মুগ্ধ।" }
-  ],
-  ratingText: "৫ তারকার নির্ভরযোগ্য রেটিং",
-
-  faq: [
-    { q: "ডেলিভারি পেতে কতদিন সময় লাগবে?", a: "ঢাকার ভিতরে ২৪ থেকে ৪৮ ঘণ্টা এবং ঢাকার বাইরে ২ থেকে ৩ কার্যদিবসের মধ্যে সারা দেশে হোম ডেলিভারি পৌঁছে দেওয়া হয়।" },
-    { q: "অগ্রিম কোনো টাকা দিতে হবে?",     a: "না, অগ্রিম কোনো টাকা লাগবে না। ডেলিভারিম্যানের কাছ থেকে পণ্য হাতে পেয়ে মূল্য পরিশোধ করবেন (ক্যাশ অন ডেলিভারি)।" },
-    { q: "পণ্য দেখার সুযোগ আছে কি?",       a: "হ্যাঁ, ডেলিভারিম্যানের সামনে পণ্য দেখে নিয়ে তারপর টাকা পরিশোধ করতে পারবেন।" }
-  ]
-};
-
-/* =========================================================
+      /* =========================================================
    Helpers
    ========================================================= */
-const $  = (s, r = document) => r.querySelector(s);
-const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-const img = key => DATA.images[key];
-const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const save = DATA.product.regularPrice - DATA.product.offerPrice;
+      const $ = (s, r = document) => r.querySelector(s);
+      const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+      const img = (key) => DATA.images[key];
+      const esc = (s) =>
+        String(s).replace(
+          /[&<>"']/g,
+          (c) =>
+            ({
+              "&": "&amp;",
+              "<": "&lt;",
+              ">": "&gt;",
+              '"': "&quot;",
+              "'": "&#39;",
+            })[c],
+        );
+      const save = DATA.product.regularPrice - DATA.product.offerPrice;
 
-const ICONS = {
-  flame:   '<path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"/>',
-  truck:   '<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>',
-  package: '<path d="m16 16 2 2 4-4"/><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"/><path d="m7.5 4.27 9 5.15"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" x2="12" y1="22" y2="12"/>',
-  rotate:  '<path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/>',
-  check:   '<path d="M20 6 9 17l-5-5"/>',
-  phone:   '<path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>',
-  bag:     '<path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/>',
-  arrow:   '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
-  gift:    '<rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/>',
-  shield:  '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>',
-  chevron: '<path d="m6 9 6 6 6-6"/>',
-  minus:   '<path d="M5 12h14"/>',
-  plus:    '<path d="M5 12h14"/><path d="M12 5v14"/>',
-  globe:   '<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>',
-  pin:     '<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>',
-  star:    '<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/>',
-  chat:    '<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>'
-};
-const icon = (n, cls = 'w-4 h-4', fill = 'none') =>
-  `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="${fill}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${ICONS[n]}</svg>`;
-const stars = (n, cls) => Array.from({ length: n }, () => icon('star', cls + ' fill-amber-400 text-amber-400', 'currentColor')).join('');
+      const ICONS = {
+        flame:
+          '<path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"/>',
+        truck:
+          '<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>',
+        package:
+          '<path d="m16 16 2 2 4-4"/><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"/><path d="m7.5 4.27 9 5.15"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" x2="12" y1="22" y2="12"/>',
+        rotate:
+          '<path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/>',
+        check: '<path d="M20 6 9 17l-5-5"/>',
+        phone:
+          '<path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>',
+        bag: '<path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/>',
+        arrow: '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
+        gift: '<rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/>',
+        shield:
+          '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>',
+        chevron: '<path d="m6 9 6 6 6-6"/>',
+        minus: '<path d="M5 12h14"/>',
+        plus: '<path d="M5 12h14"/><path d="M12 5v14"/>',
+        globe:
+          '<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>',
+        pin: '<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>',
+        star: '<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/>',
+        chat: '<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>',
+      };
+      const icon = (n, cls = "w-4 h-4", fill = "none") =>
+        `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="${fill}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="${cls}" aria-hidden="true">${ICONS[n]}</svg>`;
+      const stars = (n, cls) =>
+        Array.from({ length: n }, () =>
+          icon("star", cls + " fill-amber-400 text-amber-400", "currentColor"),
+        ).join("");
 
-/* =========================================================
+      /* =========================================================
    Sections (সব DATA থেকে map করা)
    ========================================================= */
-/* কার্ট আইকন (অর্ডার বাটনের জন্য) — currentColor, তাই বাটনের টেক্সট রঙ অনুযায়ী বদলাবে */
-const cart = (cls = 'w-5 h-5') =>
-  `<svg class="${cls}" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8.5,19A1.5,1.5,0,1,0,10,20.5,1.5,1.5,0,0,0,8.5,19ZM19,16H7a1,1,0,0,1,0-2h8.49121A3.0132,3.0132,0,0,0,18.376,11.82422L19.96143,6.2749A1.00009,1.00009,0,0,0,19,5H6.73907A3.00666,3.00666,0,0,0,3.92139,3H3A1,1,0,0,0,3,5h.92139a1.00459,1.00459,0,0,1,.96142.7251l.15552.54474.00024.00506L6.6792,12.01709A3.00006,3.00006,0,0,0,7,18H19a1,1,0,0,0,0-2ZM17.67432,7l-1.2212,4.27441A1.00458,1.00458,0,0,1,15.49121,12H8.75439l-.25494-.89221L7.32642,7ZM16.5,19A1.5,1.5,0,1,0,18,20.5,1.5,1.5,0,0,0,16.5,19Z"/></svg>`;
+      /* কার্ট আইকন (অর্ডার বাটনের জন্য) — currentColor, তাই বাটনের টেক্সট রঙ অনুযায়ী বদলাবে */
+      const cart = (cls = "w-5 h-5") =>
+        `<svg class="${cls}" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8.5,19A1.5,1.5,0,1,0,10,20.5,1.5,1.5,0,0,0,8.5,19ZM19,16H7a1,1,0,0,1,0-2h8.49121A3.0132,3.0132,0,0,0,18.376,11.82422L19.96143,6.2749A1.00009,1.00009,0,0,0,19,5H6.73907A3.00666,3.00666,0,0,0,3.92139,3H3A1,1,0,0,0,3,5h.92139a1.00459,1.00459,0,0,1,.96142.7251l.15552.54474.00024.00506L6.6792,12.01709A3.00006,3.00006,0,0,0,7,18H19a1,1,0,0,0,0-2ZM17.67432,7l-1.2212,4.27441A1.00458,1.00458,0,0,1,15.49121,12H8.75439l-.25494-.89221L7.32642,7ZM16.5,19A1.5,1.5,0,1,0,18,20.5,1.5,1.5,0,0,0,16.5,19Z"/></svg>`;
 
-/* WhatsApp অফিসিয়াল লোগো — currentColor, তাই বাটনের টেক্সট রঙ অনুযায়ী বদলাবে */
-const wa = (cls = 'w-5 h-5') =>
-  `<svg class="${cls} shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>`;
+      /* WhatsApp অফিসিয়াল লোগো — currentColor, তাই বাটনের টেক্সট রঙ অনুযায়ী বদলাবে */
+      const wa = (cls = "w-5 h-5") =>
+        `<svg class="${cls} shrink-0" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>`;
 
-const P = DATA.product, B = DATA.brand;
+      const P = DATA.product,
+        B = DATA.brand;
 
-const WA_LINK = `https://wa.me/${B.whatsapp}?text=` +
-  encodeURIComponent(`আসসালামু আলাইকুম, আমি ${P.title} (${P.packLabel}) সম্পর্কে জানতে চাই।`);
+      const WA_LINK =
+        `https://wa.me/${B.whatsapp}?text=` +
+        encodeURIComponent(
+          `আসসালামু আলাইকুম, আমি ${P.title} (${P.packLabel}) সম্পর্কে জানতে চাই।`,
+        );
 
-/* লোগো (header ও footer দুই জায়গাতেই ব্যবহার হয়) */
-const logoHtml = () => `
+      /* লোগো (header ও footer দুই জায়গাতেই ব্যবহার হয়) */
+      const logoHtml = () => `
 <a href="${B.website}" target="_blank" rel="noopener" aria-label="${esc(B.domain)}" class="flex items-center gap-1 shrink-0">
-  ${B.logo
-    ? `<img src="${esc(B.logo)}" alt="${esc(B.domain)}" referrerpolicy="no-referrer" class="h-9 md:h-10 w-auto object-contain"/>`
-    : `<span class="text-xl font-extrabold text-[#8b1515]">${esc(B.name)}</span><span class="text-xl font-extrabold text-stone-500">.com</span>`}
+  ${
+    B.logo
+      ? `<img src="${esc(B.logo)}" alt="${esc(B.domain)}" referrerpolicy="no-referrer" class="h-9 md:h-10 w-auto object-contain"/>`
+      : `<span class="text-xl font-extrabold text-[#8b1515]">${esc(B.name)}</span><span class="text-xl font-extrabold text-stone-500">.com</span>`
+  }
 </a>`;
 
-const topBar = () => `
+      const topBar = () => `
 <div class="bg-[#8b1515] text-white py-2 px-4 text-center text-xs md:text-sm font-medium tracking-wide flex items-center justify-center gap-2">
-  ${icon('flame', 'w-4 h-4 text-amber-300 shrink-0')}
-  <span>${esc(P.title)} — আলাদা কিনলে ${P.regularPrice} টাকা, কম্বোতে এখন মাত্র <strong>${P.offerPrice} টাকা</strong></span>
+  ${icon("flame", "w-4 h-4 text-amber-300 shrink-0")}
+  <span>${esc(P.title)} আলাদা কিনলে ${P.regularPrice} টাকা, কম্বোতে এখন মাত্র <strong>${P.offerPrice} টাকা</strong></span>
   <span class="hidden sm:inline opacity-75">·</span>
   <span class="hidden sm:inline text-amber-200">${esc(P.codText)}</span>
 </div>`;
 
-const header = () => `
+      const header = () => `
 <header class="sticky top-0 z-40 bg-[#faf8f5]/95 backdrop-blur-md border-b border-stone-200/80 px-4 md:px-8 py-3.5">
   <div class="max-w-6xl mx-auto flex items-center justify-between gap-8">
     ${logoHtml()}
@@ -263,19 +488,19 @@ const header = () => `
     </nav>
     <div class="flex items-center gap-2 md:gap-3 shrink-0">
       <a href="${WA_LINK}" target="_blank" rel="noopener" class="btn-wa hidden sm:inline-flex items-center gap-1.5 text-xs md:text-sm font-semibold text-emerald-700 hover:bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-300">
-        ${wa('w-4 h-4')}<span>WhatsApp</span>
+        ${wa("w-4 h-4")}<span>WhatsApp</span>
       </a>
       <a href="tel:${B.phoneHref}" class="btn-wa hidden sm:inline-flex items-center gap-1.5 text-xs md:text-sm font-semibold text-stone-700 hover:text-[#8b1515] px-3 py-1.5 rounded-lg border border-stone-300">
-        ${icon('phone', 'w-3.5 h-3.5 text-[#8b1515]')}<span>${esc(B.phone)}</span>
+        ${icon("phone", "w-3.5 h-3.5 text-[#8b1515]")}<span>${esc(B.phone)}</span>
       </a>
       <button data-cta class="cta-pulse px-4 py-2 text-xs md:text-sm font-bold text-white bg-[#8b1515] hover:bg-[#721010] rounded-lg shadow-sm whitespace-nowrap flex items-center gap-1.5 cursor-pointer">
-        ${cart('w-4 h-4')}<span>অর্ডার করুন</span>
+        ${cart("w-4 h-4")}<span>অর্ডার করুন</span>
       </button>
     </div>
   </div>
 </header>`;
 
-const hero = () => `
+      const hero = () => `
 <section class="pt-8 pb-12 md:py-16 px-4 md:px-8 border-b border-stone-200">
   <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
     <div class="lg:col-span-7 space-y-6">
@@ -302,28 +527,32 @@ const hero = () => `
         <div class="pt-2 space-y-3">
           <div class="flex flex-col sm:flex-row sm:items-center gap-3">
             <button data-cta class="cta-pulse w-full sm:w-auto px-8 py-3.5 bg-[#8b1515] hover:bg-[#721010] text-white font-extrabold text-sm rounded-xl shadow-md flex items-center justify-center gap-2 cursor-pointer">
-              ${cart('w-5 h-5')}<span>${esc(P.ctaText)}</span>${icon('arrow', 'w-5 h-5')}
+              ${cart("w-5 h-5")}<span>${esc(P.ctaText)}</span>${icon("arrow", "w-5 h-5")}
             </button>
             <div class="grid grid-cols-2 sm:flex gap-3">
               <a href="${WA_LINK}" target="_blank" rel="noopener" class="btn-wa wa-pulse px-5 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl shadow-md flex items-center justify-center gap-2">
-                ${wa('w-5 h-5')}<span>WhatsApp</span>
+                ${wa("w-5 h-5")}<span>WhatsApp</span>
               </a>
               <a href="tel:${B.phoneHref}" class="btn-wa px-5 py-3.5 bg-white hover:bg-stone-50 text-[#8b1515] font-bold text-sm rounded-xl border-2 border-[#8b1515]/30 flex items-center justify-center gap-2">
-                ${icon('phone', 'w-5 h-5')}<span>কল করুন</span>
+                ${icon("phone", "w-5 h-5")}<span>কল করুন</span>
               </a>
             </div>
           </div>
-          <p class="text-xs font-semibold text-[#8b1515] flex items-center gap-1.5 pt-1">${icon('flame', 'w-3.5 h-3.5 shrink-0')}<span>${esc(P.stockText)}</span></p>
+          <p class="text-xs font-semibold text-[#8b1515] flex items-center gap-1.5 pt-1">${icon("flame", "w-3.5 h-3.5 shrink-0")}<span>${esc(P.stockText)}</span></p>
         </div>
       </div>
 
       <div class="grid grid-cols-3 gap-3 pt-2 text-center text-xs text-stone-600">
-        ${DATA.trust.map(t => `
+        ${DATA.trust
+          .map(
+            (t) => `
           <div class="p-3 bg-stone-100/70 rounded-lg">
-            ${icon(t.icon, 'w-5 h-5 mx-auto text-[#8b1515] mb-1')}
+            ${icon(t.icon, "w-5 h-5 mx-auto text-[#8b1515] mb-1")}
             <span class="font-semibold block text-stone-800">${esc(t.title)}</span>
             <span class="text-[11px] text-stone-500">${esc(t.text)}</span>
-          </div>`).join('')}
+          </div>`,
+          )
+          .join("")}
       </div>
     </div>
 
@@ -332,15 +561,19 @@ const hero = () => `
         <div class="relative aspect-square w-full rounded-xl overflow-hidden bg-stone-100">
           <img id="main-img" src="${img(DATA.gallery[0].image)}" alt="${esc(P.title)}" referrerpolicy="no-referrer" class="w-full h-full object-cover"/>
           <div class="absolute top-3 left-3 bg-[#8b1515] text-white text-xs font-bold px-3 py-1 rounded shadow-md flex items-center gap-1.5">
-            ${icon('package', 'w-3.5 h-3.5 text-amber-300')}<span>${esc(P.packLabel)} সম্পূর্ণ কম্বো সেট</span>
+            ${icon("package", "w-3.5 h-3.5 text-amber-300")}<span>${esc(P.packLabel)} সম্পূর্ণ কম্বো সেট</span>
           </div>
         </div>
         <div class="grid grid-cols-5 gap-2 pt-3" id="thumbs">
-          ${DATA.gallery.map((g, i) => `
+          ${DATA.gallery
+            .map(
+              (g, i) => `
             <button type="button" data-thumb="${i}" title="${esc(g.label)}"
-              class="relative aspect-square rounded-lg overflow-hidden border-2 p-0.5 bg-stone-50 cursor-pointer ${i === 0 ? 'border-[#8b1515]' : 'border-stone-200 opacity-80 hover:opacity-100'}">
+              class="relative aspect-square rounded-lg overflow-hidden border-2 p-0.5 bg-stone-50 cursor-pointer ${i === 0 ? "border-[#8b1515]" : "border-stone-200 opacity-80 hover:opacity-100"}">
               <img src="${img(g.image)}" alt="${esc(g.label)}" referrerpolicy="no-referrer" class="w-full h-full object-cover rounded-md"/>
-            </button>`).join('')}
+            </button>`,
+            )
+            .join("")}
         </div>
         <div class="text-center pt-1 text-[11px] text-stone-500 font-medium">(ছবির ওপর ক্লিক করে আলাদাভাবে বড় করে দেখুন)</div>
       </div>
@@ -348,32 +581,93 @@ const hero = () => `
   </div>
 </section>`;
 
+//       const comboList = () => `
+// <section id="combo-list" class="py-12 md:py-16 px-4 md:px-8 bg-white border-b border-stone-200">
+//   <div class="max-w-4xl mx-auto space-y-6">
+//     <div class="space-y-1">
+//       <div class="text-xs font-bold text-[#8b1515] uppercase tracking-wider">প্যাকেজ বিবরণ</div>
+//       <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">কম্বোতে যা যা আছে</h2>
+//     </div>
+//     <div class="overflow-hidden border border-stone-200 rounded-xl bg-white">
+//       <table class="w-full text-left border-collapse">
+//         <thead><tr class="bg-stone-100/80 border-b border-stone-200 text-stone-800 text-xs sm:text-sm font-bold">
+//           <th class="py-3.5 px-4 sm:px-6">পণ্য</th><th class="py-3.5 px-4 sm:px-6 text-right">সংখ্যা</th></tr></thead>
+//         <tbody class="divide-y divide-stone-200 text-xs sm:text-sm text-stone-700">
+//           ${DATA.combo
+//             .map(
+//               (c) => `
+//             <tr><td class="py-3.5 px-4 sm:px-6 font-semibold"><span class="inline-block w-2 h-2 rounded-full bg-[#8b1515] mr-2"></span>${esc(c.name)}</td>
+//             <td class="py-3.5 px-4 sm:px-6 text-right font-bold text-stone-900">${esc(c.qty)}</td></tr>`,
+//             )
+//             .join("")}
+//         </tbody>
+//         <tfoot><tr class="bg-stone-50 border-t-2 border-stone-300 text-xs sm:text-sm">
+//           <td class="py-3.5 px-4 sm:px-6 font-bold text-stone-900">কম্বো অফার মূল্য (মোট ${DATA.combo.length}টি পণ্য):</td>
+//           <td class="py-3.5 px-4 sm:px-6 text-right font-extrabold text-[#8b1515] text-base tabular-nums">মাত্র ${P.offerPrice} টাকা
+//             <span class="text-xs text-stone-400 line-through font-normal block sm:inline sm:ml-1">${P.regularPrice} টাকা</span></td></tr></tfoot>
+//       </table>
+//     </div>
+//   </div>
+// </section>`;
+
+
 const comboList = () => `
-<section id="combo-list" class="py-12 md:py-16 px-4 md:px-8 bg-white border-b border-stone-200">
-  <div class="max-w-4xl mx-auto space-y-6">
-    <div class="space-y-1">
-      <div class="text-xs font-bold text-[#8b1515] uppercase tracking-wider">প্যাকেজ বিবরণ</div>
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">কম্বোতে যা যা আছে</h2>
+<section id="combo-list" class="py-14 md:py-20 px-4 md:px-8 bg-white border-b border-stone-200">
+  <div class="max-w-6xl mx-auto space-y-10">
+    <div class="text-center max-w-xl mx-auto space-y-2">
+      <div class="inline-block text-xs font-bold text-[#8b1515] bg-red-50 border border-[#8b1515]/15 px-3 py-1 rounded-full">প্যাকেজ বিবরণ</div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 tracking-tight">কম্বোতে যা যা আছে</h2>
+      <p class="text-xs sm:text-sm text-stone-500">${DATA.combo.length}টি দরকারি পণ্য, একটি প্যাকেজে</p>
     </div>
-    <div class="overflow-hidden border border-stone-200 rounded-xl bg-white">
-      <table class="w-full text-left border-collapse">
-        <thead><tr class="bg-stone-100/80 border-b border-stone-200 text-stone-800 text-xs sm:text-sm font-bold">
-          <th class="py-3.5 px-4 sm:px-6">পণ্য</th><th class="py-3.5 px-4 sm:px-6 text-right">সংখ্যা</th></tr></thead>
-        <tbody class="divide-y divide-stone-200 text-xs sm:text-sm text-stone-700">
-          ${DATA.combo.map(c => `
-            <tr><td class="py-3.5 px-4 sm:px-6 font-semibold"><span class="inline-block w-2 h-2 rounded-full bg-[#8b1515] mr-2"></span>${esc(c.name)}</td>
-            <td class="py-3.5 px-4 sm:px-6 text-right font-bold text-stone-900">${esc(c.qty)}</td></tr>`).join('')}
-        </tbody>
-        <tfoot><tr class="bg-stone-50 border-t-2 border-stone-300 text-xs sm:text-sm">
-          <td class="py-3.5 px-4 sm:px-6 font-bold text-stone-900">কম্বো অফার মূল্য (মোট ${DATA.combo.length}টি পণ্য):</td>
-          <td class="py-3.5 px-4 sm:px-6 text-right font-extrabold text-[#8b1515] text-base tabular-nums">মাত্র ${P.offerPrice} টাকা
-            <span class="text-xs text-stone-400 line-through font-normal block sm:inline sm:ml-1">${P.regularPrice} টাকা</span></td></tr></tfoot>
-      </table>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-7">
+      ${DATA.combo
+        .map(
+          (c, i) => `
+        <div class="relative group bg-[#faf8f5] border border-stone-200 rounded-2xl p-2.5 sm:p-3 hover:border-[#8b1515]/40 hover:-translate-y-1 hover:shadow-lg transition duration-300">
+          <div class="relative aspect-square rounded-xl overflow-hidden bg-stone-100">
+            <img src="${img(c.image)}" alt="${esc(c.name)}" loading="lazy" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"/>
+            <span class="absolute bottom-2 right-2 bg-stone-900/85 text-white text-[11px] font-bold px-2.5 py-1 rounded-full">${esc(c.qty)}</span>
+          </div>
+          <h3 class="px-1 pt-3 pb-1.5 text-xs sm:text-sm font-bold text-stone-900 leading-snug text-center min-h-[2.8em] flex items-center justify-center">${esc(c.name)}</h3>
+          ${
+            i < DATA.combo.length - 1
+              ? `<span class="hidden lg:flex absolute top-1/2 -right-[22px] -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white border-2 border-[#8b1515]/25 text-[#8b1515] items-center justify-center shadow-sm">${icon("plus", "w-4 h-4")}</span>`
+              : ""
+          }
+        </div>`,
+        )
+        .join("")}
+    </div>
+
+    <!-- Ticket style offer bar -->
+    <div class="relative bg-[#8b1515] text-white rounded-2xl overflow-hidden">
+      <span class="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white"></span>
+      <span class="absolute -right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white"></span>
+      <div class="flex flex-col md:flex-row items-stretch">
+        <div class="flex-1 p-6 md:p-8 text-center md:text-left space-y-1">
+          <div class="text-xs font-bold text-amber-200 uppercase tracking-wider">কম্বো অফার মূল্য (মোট ${DATA.combo.length}টি পণ্য)</div>
+          <div class="flex items-baseline justify-center md:justify-start gap-3">
+            <span class="text-4xl md:text-5xl font-extrabold tabular-nums">${P.offerPrice} টাকা</span>
+            <span class="text-lg text-red-200/80 line-through tabular-nums">${P.regularPrice} টাকা</span>
+          </div>
+          <div class="inline-flex items-center gap-1.5 mt-2 bg-white/15 border border-white/20 px-3 py-1 rounded-full text-xs font-bold">
+            ${icon("flame", "w-3.5 h-3.5 text-amber-300")}<span>সরাসরি ${save} টাকা সাশ্রয়</span>
+          </div>
+        </div>
+        <div class="hidden md:block border-l-2 border-dashed border-white/30 my-5"></div>
+        <div class="md:hidden border-t-2 border-dashed border-white/30 mx-6"></div>
+        <div class="p-6 md:p-8 flex flex-col items-center justify-center gap-2 md:min-w-[280px]">
+          <button data-cta class="cta-pulse w-full px-6 py-3.5 bg-white text-[#8b1515] hover:bg-stone-100 font-extrabold text-sm rounded-xl flex items-center justify-center gap-2 cursor-pointer">
+            ${cart("w-5 h-5")}<span>অর্ডার করুন</span>${icon("arrow", "w-4 h-4")}
+          </button>
+          <span class="text-[11px] text-red-100 flex items-center gap-1.5">${icon("shield", "w-3.5 h-3.5")}${esc(P.codText)}</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>`;
-
-const features = () => `
+      const features = () => `
 <section id="features" class="py-14 md:py-20 px-4 md:px-8 border-b border-stone-200">
   <div class="max-w-6xl mx-auto space-y-12">
     <div class="max-w-2xl space-y-1">
@@ -381,7 +675,9 @@ const features = () => `
       <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 tracking-tight">প্রতিটি পণ্যের বৈশিষ্ট্য</h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-      ${DATA.features.map((f, i) => `
+      ${DATA.features
+        .map(
+          (f, i) => `
         <div class="bg-white border border-stone-200 rounded-2xl p-5 md:p-6 space-y-4 hover:border-stone-300 transition-colors">
           <div class="relative w-full rounded-xl overflow-hidden bg-stone-100">
             <img src="${img(f.image)}" alt="${esc(f.title)}" referrerpolicy="no-referrer" class="w-full h-auto block"/>
@@ -389,14 +685,16 @@ const features = () => `
           </div>
           <h3 class="text-lg sm:text-xl font-bold text-stone-900">${i + 1}. ${esc(f.title)}</h3>
           <ul class="space-y-2.5 text-xs sm:text-sm text-stone-700">
-            ${f.points.map(p => `<li class="flex items-start gap-2.5">${icon('check', 'w-4 h-4 text-emerald-600 shrink-0 mt-0.5')}<span>${esc(p)}</span></li>`).join('')}
+            ${f.points.map((p) => `<li class="flex items-start gap-2.5">${icon("check", "w-4 h-4 text-emerald-600 shrink-0 mt-0.5")}<span>${esc(p)}</span></li>`).join("")}
           </ul>
-        </div>`).join('')}
+        </div>`,
+        )
+        .join("")}
     </div>
   </div>
 </section>`;
 
-const whyBuy = () => `
+      const whyBuy = () => `
 <section id="why-buy" class="py-14 md:py-20 px-4 md:px-8 bg-white border-b border-stone-200">
   <div class="max-w-5xl mx-auto space-y-10">
     <div class="space-y-1">
@@ -404,164 +702,361 @@ const whyBuy = () => `
       <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 tracking-tight">কেন এই কম্বো কিনবেন?</h2>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      ${DATA.why.map(w => `
-        <div class="p-5 rounded-xl border border-stone-200 bg-[#faf8f5] space-y-2 ${w.wide ? 'sm:col-span-2 lg:col-span-2' : ''}">
-          <div class="text-emerald-700 font-bold text-sm flex items-center gap-2">${icon(w.icon || 'check', 'w-4 h-4 shrink-0' + (w.icon ? ' text-[#8b1515]' : ''))}<span>${esc(w.title)}</span></div>
+      ${DATA.why
+        .map(
+          (w) => `
+        <div class="p-5 rounded-xl border border-stone-200 bg-[#faf8f5] space-y-2 ${w.wide ? "sm:col-span-2 lg:col-span-2" : ""}">
+          <div class="text-emerald-700 font-bold text-sm flex items-center gap-2">${icon(w.icon || "check", "w-4 h-4 shrink-0" + (w.icon ? " text-[#8b1515]" : ""))}<span>${esc(w.title)}</span></div>
           <p class="text-xs sm:text-sm text-stone-600">${esc(w.text)}</p>
-        </div>`).join('')}
+        </div>`,
+        )
+        .join("")}
     </div>
     <div class="p-6 md:p-8 bg-[#8b1515] text-white rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-6">
       <div class="space-y-1 text-center sm:text-left">
         <h4 class="text-xl sm:text-2xl font-bold">${esc(P.stockText)}</h4>
         <p class="text-xs sm:text-sm text-stone-200">${esc(P.codText)} সুবিধা—পণ্য হাতে পেয়ে টাকা পরিশোধ করুন।</p>
       </div>
-      <button data-cta class="btn-wa px-6 py-3 bg-white hover:bg-stone-100 text-[#8b1515] font-extrabold rounded-lg text-sm whitespace-nowrap shrink-0 cursor-pointer inline-flex items-center justify-center gap-2">${cart('w-5 h-5')}<span>${esc(P.ctaText)}</span></button>
+      <button data-cta class="btn-wa px-6 py-3 bg-white hover:bg-stone-100 text-[#8b1515] font-extrabold rounded-lg text-sm whitespace-nowrap shrink-0 cursor-pointer inline-flex items-center justify-center gap-2">${cart("w-5 h-5")}<span>${esc(P.ctaText)}</span></button>
     </div>
   </div>
 </section>`;
 
+//       const orderForm = () => `
+// <section id="order-form-section" class="py-14 md:py-20 px-4 md:px-8 bg-stone-100/70 border-b border-stone-200">
+//   <div class="max-w-3xl mx-auto">
+//     <div class="text-center max-w-xl mx-auto mb-8 space-y-2">
+//       <span class="text-xs font-bold text-[#8b1515] uppercase tracking-wider">অর্ডার ফরম</span>
+//       <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">ক্যাশ অন ডেলিভারিতে অর্ডার কনফার্ম করুন</h2>
+//       <p class="text-xs sm:text-sm text-stone-600">অগ্রিম কোনো টাকা লাগবে না। ডেলিভারিম্যান থেকে পণ্য দেখে মূল্য পরিশোধ করবেন।</p>
+//     </div>
+//     <div class="bg-white border border-stone-200 rounded-2xl shadow-sm overflow-hidden" id="order-box">
+//       <form id="order-form" class="p-6 sm:p-8 space-y-6" novalidate>
+//         <div class="space-y-3">
+//           <label class="text-sm font-bold text-stone-800 flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#8b1515] text-white text-xs flex items-center justify-center">১</span>প্যাকেজ ও পরিমাণ (Quantity):</label>
+//           <div class="p-4 rounded-xl border-2 border-[#8b1515] bg-red-50/25 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+//             <div class="flex items-center gap-3.5">
+//               <img src="${img("combo")}" alt="${esc(P.title)}" referrerpolicy="no-referrer" class="w-16 h-16 rounded-lg object-cover border border-stone-200 shrink-0"/>
+//               <div>
+//                 <div class="font-extrabold text-sm sm:text-base text-stone-900">${esc(P.title)} (${esc(P.packLabel)})</div>
+//                 <div class="text-xs text-stone-600 mt-0.5">${esc(P.subtitle)}</div>
+//                 <div class="text-xs text-stone-500 mt-1 flex items-center gap-2">
+//                   <span>প্যাক মূল্য:</span><span class="font-bold text-[#8b1515] tabular-nums">${P.offerPrice} টাকা</span>
+//                   <span class="text-[11px] text-stone-400 line-through tabular-nums">${P.regularPrice} টাকা</span>
+//                 </div>
+//               </div>
+//             </div>
+//             <div class="flex items-center justify-between sm:justify-end w-full sm:w-auto pt-3 sm:pt-0 border-t sm:border-t-0 border-stone-200 gap-3">
+//               <div class="flex items-center border-2 border-stone-300 rounded-lg bg-white overflow-hidden">
+//                 <button type="button" id="qty-minus" class="w-9 h-9 flex items-center justify-center text-stone-700 hover:bg-stone-100 disabled:opacity-30 cursor-pointer" aria-label="পরিমাণ কমান">${icon("minus")}</button>
+//                 <div id="qty-val" class="w-12 h-9 flex items-center justify-center font-bold text-stone-900 border-x border-stone-200 tabular-nums bg-stone-50">1</div>
+//                 <button type="button" id="qty-plus" class="w-9 h-9 flex items-center justify-center text-stone-700 hover:bg-stone-100 cursor-pointer" aria-label="পরিমাণ বাড়ান">${icon("plus")}</button>
+//               </div>
+//               <div class="text-right sm:min-w-[100px]">
+//                 <div class="text-[10px] text-stone-500 font-medium">মোট প্যাকেজ মূল্য</div>
+//                 <div id="pack-total" class="text-base font-extrabold text-[#8b1515] tabular-nums"></div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         <div class="space-y-3 pt-2 border-t border-stone-100">
+//           <label class="text-sm font-bold text-stone-800 flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#8b1515] text-white text-xs flex items-center justify-center">২</span>ডেলিভারি এলাকা নির্বাচন করুন:</label>
+//           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="delivery-opts">
+//             ${DATA.delivery
+//               .map(
+//                 (d, i) => `
+//               <label data-area="${d.id}" class="p-3.5 rounded-xl border-2 cursor-pointer flex items-center justify-between">
+//                 <span class="flex items-center gap-3">
+//                   <input type="radio" name="delivery_loc" value="${d.id}" ${i === 0 ? "checked" : ""} class="w-4 h-4 accent-[#8b1515]"/>
+//                   <span class="font-bold text-sm text-stone-900">${esc(d.label)}</span>
+//                 </span>
+//                 <span class="font-bold text-xs text-stone-700 tabular-nums">${d.charge} টাকা চার্জ</span>
+//               </label>`,
+//               )
+//               .join("")}
+//           </div>
+//         </div>
+
+//         <div class="space-y-4 pt-2 border-t border-stone-100">
+//           <label class="text-sm font-bold text-stone-800 flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#8b1515] text-white text-xs flex items-center justify-center">৩</span>আপনার ডেলিভারি তথ্য দিন:</label>
+//           <div class="space-y-3">
+//             <div><label for="f-name" class="block text-xs font-semibold text-stone-700 mb-1">আপনার নাম <span class="text-red-600">*</span></label>
+//               <input id="f-name" type="text" placeholder="আপনার সম্পূর্ণ নাম লিখুন" class="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 focus:outline-none focus:ring-2 focus:ring-[#8b1515]/20 focus:border-[#8b1515] text-sm bg-white"/></div>
+//             <div>
+//               <label for="f-phone" class="block text-xs font-semibold text-stone-700 mb-1">মোবাইল নাম্বার <span class="text-red-600">*</span></label>
+//               <div id="phone-group" class="flex items-stretch rounded-xl border border-stone-300 bg-white overflow-hidden focus-within:ring-2 focus-within:ring-[#8b1515]/20 focus-within:border-[#8b1515] transition">
+//                 <div class="flex items-center gap-2 px-3.5 bg-[#faf5ef] border-r border-stone-200 shrink-0 select-none">
+//                   <svg class="w-6 h-4 rounded-[3px] shrink-0" viewBox="0 0 30 20" aria-hidden="true">
+//                     <rect width="30" height="20" fill="#006a4e"/>
+//                     <circle cx="13.5" cy="10" r="6" fill="#f42a41"/>
+//                   </svg>
+//                   <span class="text-sm font-extrabold text-stone-800">+88</span>
+//                 </div>
+//                 <input id="f-phone" type="tel" inputmode="numeric" maxlength="11" autocomplete="tel"
+//                   placeholder="01XXXXXXXXX"
+//                   class="flex-1 min-w-0 px-4 py-3 text-sm bg-transparent outline-none placeholder:text-stone-400"/>
+//               </div>
+//               <div class="mt-1 text-xs text-stone-400">১১ ডিজিটের নম্বর, যেমন 01712345678</div>
+//               <div id="phone-err" class="hidden mt-1 text-xs font-medium text-rose-600"></div>
+//             </div>
+//             <div><label for="f-addr" class="block text-xs font-semibold text-stone-700 mb-1">সম্পূর্ণ ঠিকানা <span class="text-red-600">*</span></label>
+//               <textarea id="f-addr" rows="2" placeholder="জেলা, থানা ও এলাকা/রোড নং বিস্তারিত লিখুন" class="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 focus:outline-none focus:ring-2 focus:ring-[#8b1515]/20 focus:border-[#8b1515] text-sm bg-white resize-none"></textarea></div>
+//           </div>
+//         </div>
+
+//         <div class="p-3.5 bg-stone-50 border border-stone-200 rounded-xl flex items-center justify-between text-xs text-stone-700">
+//           <div class="flex items-center gap-2">${icon("shield", "w-4 h-4 text-emerald-600 shrink-0")}
+//             <div><strong class="block text-stone-900 font-bold">ক্যাশ অন ডেলিভারি (Cash On Delivery)</strong><span class="text-stone-500">পণ্য হাতে পাওয়ার পর দেখে টাকা পরিশোধ করার সুবিধা।</span></div></div>
+//           <span class="text-emerald-700 font-bold shrink-0">নির্বাচিত</span>
+//         </div>
+
+//         <div id="summary" class="p-4 bg-stone-100 rounded-xl space-y-3 text-xs sm:text-sm"></div>
+
+//         <div id="form-error" class="hidden p-3 bg-red-50 border border-red-200 rounded-lg text-xs font-semibold text-red-700"></div>
+
+//         <button type="submit" id="submit-btn" class="cta-pulse w-full py-4 bg-[#8b1515] hover:bg-[#721010] disabled:opacity-75 text-white font-extrabold text-base sm:text-lg rounded-xl shadow-md flex items-center justify-center gap-2 cursor-pointer"></button>
+//         <p class="text-center text-[11px] text-stone-500">🔒 আপনার দেওয়া তথ্য ${esc(B.domain)}-এ সুরক্ষিত থাকবে।</p>
+//       </form>
+//     </div>
+//   </div>
+// </section>`;
 const orderForm = () => `
-<section id="order-form-section" class="py-14 md:py-20 px-4 md:px-8 bg-stone-100/70 border-b border-stone-200">
-  <div class="max-w-3xl mx-auto">
+<section id="order-form-section" class="py-14 md:py-20 px-4 md:px-8 bg-[#f7f3ee] border-b border-stone-200">
+  <div class="max-w-6xl mx-auto">
     <div class="text-center max-w-xl mx-auto mb-8 space-y-2">
-      <span class="text-xs font-bold text-[#8b1515] uppercase tracking-wider">সহজ অর্ডার ফরম</span>
+      <span class="text-xs font-bold text-[#8b1515] uppercase tracking-wider">অর্ডার ফরম</span>
       <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">ক্যাশ অন ডেলিভারিতে অর্ডার কনফার্ম করুন</h2>
       <p class="text-xs sm:text-sm text-stone-600">অগ্রিম কোনো টাকা লাগবে না। ডেলিভারিম্যান থেকে পণ্য দেখে মূল্য পরিশোধ করবেন।</p>
     </div>
-    <div class="bg-white border border-stone-200 rounded-2xl shadow-sm overflow-hidden" id="order-box">
-      <form id="order-form" class="p-6 sm:p-8 space-y-6" novalidate>
-        <div class="space-y-3">
-          <label class="text-sm font-bold text-stone-800 flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#8b1515] text-white text-xs flex items-center justify-center">১</span>প্যাকেজ ও পরিমাণ (Quantity):</label>
-          <div class="p-4 rounded-xl border-2 border-[#8b1515] bg-red-50/25 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <div class="flex items-center gap-3.5">
-              <img src="${img('combo')}" alt="${esc(P.title)}" referrerpolicy="no-referrer" class="w-16 h-16 rounded-lg object-cover border border-stone-200 shrink-0"/>
-              <div>
-                <div class="font-extrabold text-sm sm:text-base text-stone-900">${esc(P.title)} (${esc(P.packLabel)})</div>
-                <div class="text-xs text-stone-600 mt-0.5">${esc(P.subtitle)}</div>
-                <div class="text-xs text-stone-500 mt-1 flex items-center gap-2">
-                  <span>প্যাক মূল্য:</span><span class="font-bold text-[#8b1515] tabular-nums">${P.offerPrice} টাকা</span>
-                  <span class="text-[11px] text-stone-400 line-through tabular-nums">${P.regularPrice} টাকা</span>
-                </div>
+
+    <div id="order-box">
+      <form id="order-form" class="space-y-5" novalidate>
+
+        <!-- ========== TOP: আপনার পণ্য ========== -->
+        <div class="bg-white border border-stone-200 rounded-3xl p-4 sm:p-6">
+          <h3 class="font-extrabold text-base text-stone-900 flex items-center gap-2 mb-4"><span>🛒</span>আপনার পণ্য</h3>
+          <div class="relative flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-2xl border border-[#8b1515] bg-red-50/50">
+            <span class="w-5 h-5 rounded bg-[#8b1515] text-white flex items-center justify-center shrink-0">${icon("check", "w-3.5 h-3.5")}</span>
+            <img src="${img("combo")}" alt="${esc(P.title)}" referrerpolicy="no-referrer" class="w-16 h-16 sm:w-[70px] sm:h-[70px] rounded-xl object-cover border border-stone-200 bg-white shrink-0"/>
+            <div class="flex-1 min-w-0 space-y-1.5">
+              <div class="font-bold text-sm sm:text-base text-stone-900 leading-snug">${esc(P.title)} (${esc(P.packLabel)})</div>
+              <div class="flex items-baseline gap-2">
+                <span class="font-extrabold text-[#8b1515] tabular-nums">৳${P.offerPrice}</span>
+                <span class="text-xs text-stone-400 line-through tabular-nums">৳${P.regularPrice}</span>
+              </div>
+                            <div class="inline-flex items-center border border-stone-300 rounded-lg bg-white overflow-hidden">
+                <button type="button" class="qty-minus w-8 h-8 flex items-center justify-center text-stone-700 hover:bg-stone-100 disabled:opacity-30 cursor-pointer" aria-label="পরিমাণ কমান">${icon("minus", "w-3.5 h-3.5")}</button>
+                <div class="qty-val w-9 h-8 flex items-center justify-center text-sm font-bold text-stone-900 border-x border-stone-200 tabular-nums bg-stone-50">1</div>
+                <button type="button" class="qty-plus w-8 h-8 flex items-center justify-center text-stone-700 hover:bg-stone-100 cursor-pointer" aria-label="পরিমাণ বাড়ান">${icon("plus", "w-3.5 h-3.5")}</button>
               </div>
             </div>
-            <div class="flex items-center justify-between sm:justify-end w-full sm:w-auto pt-3 sm:pt-0 border-t sm:border-t-0 border-stone-200 gap-3">
-              <div class="flex items-center border-2 border-stone-300 rounded-lg bg-white overflow-hidden">
-                <button type="button" id="qty-minus" class="w-9 h-9 flex items-center justify-center text-stone-700 hover:bg-stone-100 disabled:opacity-30 cursor-pointer" aria-label="পরিমাণ কমান">${icon('minus')}</button>
-                <div id="qty-val" class="w-12 h-9 flex items-center justify-center font-bold text-stone-900 border-x border-stone-200 tabular-nums bg-stone-50">1</div>
-                <button type="button" id="qty-plus" class="w-9 h-9 flex items-center justify-center text-stone-700 hover:bg-stone-100 cursor-pointer" aria-label="পরিমাণ বাড়ান">${icon('plus')}</button>
-              </div>
-              <div class="text-right sm:min-w-[100px]">
-                <div class="text-[10px] text-stone-500 font-medium">মোট প্যাকেজ মূল্য</div>
-                <div id="pack-total" class="text-base font-extrabold text-[#8b1515] tabular-nums"></div>
-              </div>
-            </div>
+            <span class="absolute top-3 right-3 text-[10px] sm:text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full whitespace-nowrap">✓ কার্টে যুক্ত হয়েছে</span>
           </div>
         </div>
 
-        <div class="space-y-3 pt-2 border-t border-stone-100">
-          <label class="text-sm font-bold text-stone-800 flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#8b1515] text-white text-xs flex items-center justify-center">২</span>ডেলিভারি এলাকা নির্বাচন করুন:</label>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="delivery-opts">
-            ${DATA.delivery.map((d, i) => `
-              <label data-area="${d.id}" class="p-3.5 rounded-xl border-2 cursor-pointer flex items-center justify-between">
-                <span class="flex items-center gap-3">
-                  <input type="radio" name="delivery_loc" value="${d.id}" ${i === 0 ? 'checked' : ''} class="w-4 h-4 accent-[#8b1515]"/>
-                  <span class="font-bold text-sm text-stone-900">${esc(d.label)}</span>
-                </span>
-                <span class="font-bold text-xs text-stone-700 tabular-nums">${d.charge} টাকা চার্জ</span>
-              </label>`).join('')}
-          </div>
-        </div>
+        <!-- ========== BOTTOM: ফর্ম + সামারি ========== -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
 
-        <div class="space-y-4 pt-2 border-t border-stone-100">
-          <label class="text-sm font-bold text-stone-800 flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#8b1515] text-white text-xs flex items-center justify-center">৩</span>আপনার ডেলিভারি তথ্য দিন:</label>
-          <div class="space-y-3">
-            <div><label for="f-name" class="block text-xs font-semibold text-stone-700 mb-1">আপনার নাম <span class="text-red-600">*</span></label>
-              <input id="f-name" type="text" placeholder="আপনার সম্পূর্ণ নাম লিখুন" class="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 focus:outline-none focus:ring-2 focus:ring-[#8b1515]/20 focus:border-[#8b1515] text-sm bg-white"/></div>
+          <!-- LEFT -->
+          <div class="lg:col-span-7 bg-white border border-stone-200 rounded-3xl p-4 sm:p-6 space-y-5">
             <div>
-              <label for="f-phone" class="block text-xs font-semibold text-stone-700 mb-1">মোবাইল নাম্বার <span class="text-red-600">*</span></label>
-              <div id="phone-group" class="flex items-stretch rounded-xl border border-stone-300 bg-white overflow-hidden focus-within:ring-2 focus-within:ring-[#8b1515]/20 focus-within:border-[#8b1515] transition">
-                <div class="flex items-center gap-2 px-3.5 bg-[#faf5ef] border-r border-stone-200 shrink-0 select-none">
+              <h3 class="font-extrabold text-base text-stone-900 flex items-center gap-2 mb-3"><span>🚚</span>ডেলিভারি এলাকা বেছে নিন</h3>
+              <div class="space-y-2.5" id="delivery-opts">
+                ${DATA.delivery
+                  .map(
+                    (d, i) => `
+                  <label data-area="${d.id}" class="p-3.5 rounded-xl border cursor-pointer flex items-center justify-between gap-3">
+                    <span class="flex items-center gap-3">
+                      <input type="radio" name="delivery_loc" value="${d.id}" ${i === 0 ? "checked" : ""} class="w-4 h-4 accent-[#8b1515]"/>
+                      <span class="w-9 h-9 rounded-lg bg-red-50 flex items-center justify-center text-lg shrink-0">${i === 0 ? "🏙️" : "🗺️"}</span>
+                      <span class="font-bold text-sm text-stone-900">${esc(d.label)}</span>
+                    </span>
+                    <span class="font-bold text-sm text-stone-600 tabular-nums shrink-0">৳${d.charge}</span>
+                  </label>`,
+                  )
+                  .join("")}
+              </div>
+            </div>
+
+            <div>
+              <label for="f-name" class="block text-sm font-bold text-stone-900 mb-1.5">আপনার নাম লিখুন <span class="text-red-600">*</span></label>
+              <input id="f-name" type="text" placeholder="আপনার সম্পূর্ণ নাম লিখুন" class="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white focus:outline-none focus:ring-2 focus:ring-[#8b1515]/20 focus:border-[#8b1515] text-sm"/>
+            </div>
+
+            <div>
+              <label for="f-phone" class="block text-sm font-bold text-stone-900 mb-1.5">আপনার ফোন নাম্বারটি লিখুন <span class="text-red-600">*</span></label>
+              <div id="phone-group" class="flex items-stretch rounded-xl border border-stone-200 bg-white overflow-hidden focus-within:ring-2 focus-within:ring-[#8b1515]/20 focus-within:border-[#8b1515] transition">
+                <div class="flex items-center gap-2 px-3.5 bg-stone-100 border-r border-stone-200 shrink-0 select-none">
                   <svg class="w-6 h-4 rounded-[3px] shrink-0" viewBox="0 0 30 20" aria-hidden="true">
-                    <rect width="30" height="20" fill="#006a4e"/>
-                    <circle cx="13.5" cy="10" r="6" fill="#f42a41"/>
+                    <rect width="30" height="20" fill="#006a4e"/><circle cx="13.5" cy="10" r="6" fill="#f42a41"/>
                   </svg>
                   <span class="text-sm font-extrabold text-stone-800">+88</span>
                 </div>
-                <input id="f-phone" type="tel" inputmode="numeric" maxlength="11" autocomplete="tel"
-                  placeholder="01XXXXXXXXX"
+                <input id="f-phone" type="tel" inputmode="numeric" maxlength="11" autocomplete="tel" placeholder="01XXXXXXXXX"
                   class="flex-1 min-w-0 px-4 py-3 text-sm bg-transparent outline-none placeholder:text-stone-400"/>
               </div>
               <div class="mt-1 text-xs text-stone-400">১১ ডিজিটের নম্বর, যেমন 01712345678</div>
               <div id="phone-err" class="hidden mt-1 text-xs font-medium text-rose-600"></div>
             </div>
-            <div><label for="f-addr" class="block text-xs font-semibold text-stone-700 mb-1">সম্পূর্ণ ঠিকানা <span class="text-red-600">*</span></label>
-              <textarea id="f-addr" rows="2" placeholder="জেলা, থানা ও এলাকা/রোড নং বিস্তারিত লিখুন" class="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 focus:outline-none focus:ring-2 focus:ring-[#8b1515]/20 focus:border-[#8b1515] text-sm bg-white resize-none"></textarea></div>
+
+            <div>
+              <label for="f-addr" class="block text-sm font-bold text-stone-900 mb-1.5">আপনার সম্পূর্ণ ঠিকানাটি লিখুন <span class="text-red-600">*</span></label>
+              <textarea id="f-addr" rows="3" placeholder="জেলা, থানা ও এলাকা/রোড নং বিস্তারিত লিখুন" class="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white focus:outline-none focus:ring-2 focus:ring-[#8b1515]/20 focus:border-[#8b1515] text-sm resize-none"></textarea>
+            </div>
           </div>
+
+          <!-- RIGHT -->
+          <div class="lg:col-span-5 bg-white border border-stone-200 rounded-3xl p-4 sm:p-6 space-y-4 lg:sticky lg:top-24">
+            <h3 class="font-extrabold text-base text-stone-900 flex items-center gap-2"><span>🧾</span>অর্ডার সামারি</h3>
+
+            <div>
+              <div class="flex justify-between text-[11px] font-bold text-[#8b1515] uppercase tracking-wider pb-2 border-b border-stone-200">
+                <span>পণ্য</span><span>সাবটোটাল</span>
+              </div>
+              <div class="flex items-center gap-3 py-4 border-b border-stone-200">
+                <div class="relative shrink-0">
+                  <img src="${img("combo")}" alt="" referrerpolicy="no-referrer" class="w-12 h-12 rounded-lg object-cover border border-stone-200"/>
+                  <span id="sum-badge" class="absolute -top-2 -left-2 w-5 h-5 rounded-full bg-[#8b1515] text-white text-[10px] font-bold flex items-center justify-center"></span>
+                </div>
+                                <div class="flex-1 min-w-0">
+                  <div class="font-bold text-sm text-stone-900 leading-snug">${esc(P.title)} (${esc(P.packLabel)})</div>
+                  <div id="sum-meta" class="text-[11px] text-stone-500 mt-0.5"></div>
+                  <div class="inline-flex items-center border border-stone-300 rounded-md bg-white overflow-hidden mt-1.5">
+  <button type="button" class="qty-minus w-6 h-6 flex items-center justify-center text-stone-700 hover:bg-stone-100 disabled:opacity-30 cursor-pointer" aria-label="পরিমাণ কমান">${icon("minus", "w-3 h-3")}</button>
+  <div class="qty-val w-7 h-6 flex items-center justify-center text-[11px] font-bold text-stone-900 border-x border-stone-200 tabular-nums bg-stone-50">1</div>
+  <button type="button" class="qty-plus w-6 h-6 flex items-center justify-center text-stone-700 hover:bg-stone-100 cursor-pointer" aria-label="পরিমাণ বাড়ান">${icon("plus", "w-3 h-3")}</button>
+</div>
+                </div>
+                <div id="sum-line" class="font-extrabold text-sm text-stone-900 tabular-nums shrink-0"></div>
+              </div>
+
+              <div class="space-y-2.5 py-4 text-sm">
+                <div class="flex justify-between text-stone-600"><span>সাবটোটাল</span><span id="sum-sub" class="font-semibold text-stone-900 tabular-nums"></span></div>
+                <div class="flex justify-between text-stone-600"><span>ডেলিভারি <strong id="sum-area" class="text-xs font-semibold text-stone-700"></strong></span><span id="sum-charge" class="font-bold text-stone-900 tabular-nums"></span></div>
+              </div>
+              <div class="flex justify-between items-center pt-4 border-t border-dashed border-stone-300 font-extrabold text-stone-900">
+                <span>সর্বমোট</span><span id="sum-total" class="text-xl text-[#8b1515] tabular-nums"></span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 px-4 py-3.5 rounded-xl border border-[#8b1515] bg-red-50/50">
+              <span class="w-4 h-4 rounded-full border-[5px] border-[#8b1515] bg-white shrink-0"></span>
+              <span class="w-7 h-5 rounded bg-emerald-600 text-white text-xs font-bold flex items-center justify-center shrink-0">৳</span>
+              <span class="font-bold text-sm text-stone-900">Cash on Delivery</span>
+            </div>
+            <p class="text-[11px] text-stone-500 -mt-2">ডেলিভারির সময় টাকা পরিশোধ করুন।</p>
+            <p class="text-[11px] text-stone-500">আপনার তথ্য শুধুমাত্র অর্ডার প্রসেস করার জন্য ব্যবহার করা হবে। <a href="${B.website}" target="_blank" rel="noopener" class="text-[#8b1515] font-semibold underline">Privacy Policy</a></p>
+
+            <div id="form-error" class="hidden p-3 bg-red-50 border border-red-200 rounded-lg text-xs font-semibold text-red-700"></div>
+
+            <button type="submit" id="submit-btn" class="cta-pulse w-full py-4 bg-gradient-to-r from-[#dc2626] to-[#8b1515] disabled:opacity-75 text-white font-extrabold text-base sm:text-lg rounded-xl shadow-lg flex items-center justify-center gap-2 cursor-pointer"></button>
+          </div>
+
         </div>
-
-        <div class="p-3.5 bg-stone-50 border border-stone-200 rounded-xl flex items-center justify-between text-xs text-stone-700">
-          <div class="flex items-center gap-2">${icon('shield', 'w-4 h-4 text-emerald-600 shrink-0')}
-            <div><strong class="block text-stone-900 font-bold">ক্যাশ অন ডেলিভারি (Cash On Delivery)</strong><span class="text-stone-500">পণ্য হাতে পাওয়ার পর দেখে টাকা পরিশোধ করার সুবিধা।</span></div></div>
-          <span class="text-emerald-700 font-bold shrink-0">নির্বাচিত</span>
-        </div>
-
-        <div id="summary" class="p-4 bg-stone-100 rounded-xl space-y-3 text-xs sm:text-sm"></div>
-
-        <div id="form-error" class="hidden p-3 bg-red-50 border border-red-200 rounded-lg text-xs font-semibold text-red-700"></div>
-
-        <button type="submit" id="submit-btn" class="cta-pulse w-full py-4 bg-[#8b1515] hover:bg-[#721010] disabled:opacity-75 text-white font-extrabold text-base sm:text-lg rounded-xl shadow-md flex items-center justify-center gap-2 cursor-pointer"></button>
-        <p class="text-center text-[11px] text-stone-500">🔒 আপনার দেওয়া তথ্য ${esc(B.domain)}-এ সুরক্ষিত থাকবে।</p>
       </form>
     </div>
   </div>
 </section>`;
-
-const reviews = () => `
+      const reviews = () => `
 <section id="reviews" class="py-14 md:py-20 px-4 md:px-8 bg-white border-b border-stone-200">
   <div class="max-w-6xl mx-auto space-y-10">
     <div class="max-w-2xl">
       <div class="text-xs font-bold text-[#8b1515] uppercase tracking-wider mb-2">গ্রাহক সন্তুষ্টি</div>
       <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">গ্রাহকদের বাস্তব অভিজ্ঞতা</h2>
       <div class="flex items-center gap-3 mt-2 text-xs sm:text-sm text-stone-600">
-        <div class="flex">${stars(5, 'w-4 h-4')}</div><span class="font-bold text-stone-800">${esc(DATA.ratingText)}</span>
+        <div class="flex">${stars(5, "w-4 h-4")}</div><span class="font-bold text-stone-800">${esc(DATA.ratingText)}</span>
       </div>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      ${DATA.reviews.map(r => `
+      ${DATA.reviews
+        .map(
+          (r) => `
         <div class="p-5 bg-[#faf8f5] border border-stone-200 rounded-xl flex flex-col justify-between space-y-3">
           <div class="space-y-2">
-            <div class="flex">${stars(r.rating, 'w-3.5 h-3.5')}</div>
+            <div class="flex">${stars(r.rating, "w-3.5 h-3.5")}</div>
             <p class="text-xs sm:text-sm text-stone-700 leading-relaxed italic">"${esc(r.text)}"</p>
           </div>
           <div class="pt-3 border-t border-stone-200/80">
             <strong class="block text-xs sm:text-sm text-stone-900 font-bold">${esc(r.name)}</strong>
             <span class="text-[11px] text-stone-500">${esc(r.place)}</span>
           </div>
-        </div>`).join('')}
+        </div>`,
+        )
+        .join("")}
     </div>
   </div>
 </section>`;
 
+//       const faq = () => `
+// <section id="faq" class="py-14 md:py-20 px-4 md:px-8 border-b border-stone-200">
+//   <div class="max-w-3xl mx-auto space-y-8">
+//     <div class="space-y-1">
+//       <div class="text-xs font-bold text-[#8b1515] uppercase tracking-wider">প্রশ্নোত্তর</div>
+//       <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">সাধারণ জিজ্ঞাসা</h2>
+//     </div>
+//     <div class="space-y-3">
+//       ${DATA.faq
+//         .map(
+//           (f, i) => `
+//         <div class="faq-item border border-stone-200 bg-white rounded-xl overflow-hidden">
+//           <button type="button" class="faq-btn w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-stone-900 hover:text-[#8b1515] cursor-pointer">
+//             <span>${esc(f.q)}</span>${icon("chevron", "faq-chev w-5 h-5 text-stone-400 shrink-0 transition-transform")}
+//           </button>
+//           <div class="faq-body ${i === 0 ? "" : "hidden"} px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-stone-100 pt-3">${esc(f.a)}</div>
+//         </div>`,
+//         )
+//         .join("")}
+//     </div>
+//   </div>
+// </section>`;
 const faq = () => `
-<section id="faq" class="py-14 md:py-20 px-4 md:px-8 border-b border-stone-200">
-  <div class="max-w-3xl mx-auto space-y-8">
-    <div class="space-y-1">
-      <div class="text-xs font-bold text-[#8b1515] uppercase tracking-wider">প্রশ্নোত্তর</div>
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">সাধারণ জিজ্ঞাসা</h2>
+<section id="faq" class="py-14 md:py-20 px-4 md:px-8 bg-[#f7f3ee] border-b border-stone-200">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+    <!-- LEFT: intro + contact card -->
+    <div class="lg:col-span-5 lg:sticky lg:top-24 space-y-5">
+      <div class="space-y-2">
+        <div class="inline-block text-xs font-bold text-[#8b1515] bg-red-50 border border-[#8b1515]/15 px-3 py-1 rounded-full">প্রশ্নোত্তর</div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 tracking-tight leading-tight">সাধারণ জিজ্ঞাসা</h2>
+        <p class="text-xs sm:text-sm text-stone-500 leading-relaxed">অর্ডারের আগে মনে যে প্রশ্নগুলো আসে, তার উত্তর এখানে পাবেন।</p>
+      </div>
+
+      <div class="relative overflow-hidden bg-[#8b1515] text-white rounded-2xl p-5 sm:p-6 space-y-4">
+        <span class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/10"></span>
+        <span class="absolute -bottom-12 -left-8 w-28 h-28 rounded-full bg-white/5"></span>
+        <div class="relative space-y-1">
+          <div class="flex items-center gap-2 font-extrabold text-base">${icon("chat", "w-5 h-5 text-amber-300")}<span>আরও কিছু জানতে চান?</span></div>
+          <p class="text-xs text-red-100 leading-relaxed">আমাদের টিম সরাসরি আপনার প্রশ্নের উত্তর দেবে।</p>
+        </div>
+        <div class="relative grid grid-cols-2 gap-2.5">
+          <a href="${WA_LINK}" target="_blank" rel="noopener" class="btn-wa wa-pulse py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm rounded-xl flex items-center justify-center gap-2">${wa("w-4 h-4")}<span>WhatsApp</span></a>
+          <a href="tel:${B.phoneHref}" class="btn-wa py-3 bg-white hover:bg-stone-100 text-[#8b1515] font-bold text-xs sm:text-sm rounded-xl flex items-center justify-center gap-2">${icon("phone", "w-4 h-4")}<span>কল করুন</span></a>
+        </div>
+        <div class="relative text-[11px] text-red-100 tabular-nums">${esc(B.phone)}</div>
+      </div>
     </div>
-    <div class="space-y-3">
-      ${DATA.faq.map((f, i) => `
-        <div class="faq-item border border-stone-200 bg-white rounded-xl overflow-hidden">
-          <button type="button" class="faq-btn w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-stone-900 hover:text-[#8b1515] cursor-pointer">
-            <span>${esc(f.q)}</span>${icon('chevron', 'faq-chev w-5 h-5 text-stone-400 shrink-0 transition-transform')}
+
+    <!-- RIGHT: accordion -->
+    <div class="lg:col-span-7 space-y-3">
+      ${DATA.faq
+        .map(
+          (f, i) => `
+        <div class="faq-item bg-white border border-stone-200 rounded-2xl overflow-hidden">
+          <button type="button" class="faq-btn w-full p-4 sm:p-5 text-left flex items-center gap-3 sm:gap-4 cursor-pointer">
+            <span class="faq-num w-9 h-9 shrink-0 rounded-xl bg-red-50 text-[#8b1515] font-extrabold text-sm flex items-center justify-center transition-colors">${i + 1}</span>
+            <span class="flex-1 font-bold text-sm sm:text-base text-stone-900 leading-snug">${esc(f.q)}</span>
+            <span class="w-8 h-8 rounded-full border border-stone-200 bg-stone-50 flex items-center justify-center shrink-0">${icon("chevron", "faq-chev w-4 h-4 text-stone-400 transition-transform")}</span>
           </button>
-          <div class="faq-body ${i === 0 ? '' : 'hidden'} px-4 pb-4 sm:px-5 sm:pb-5 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-stone-100 pt-3">${esc(f.a)}</div>
-        </div>`).join('')}
+          <div class="faq-body ${i === 0 ? "" : "hidden"} px-4 pb-5 sm:px-5 sm:pl-[4.75rem] text-xs sm:text-sm text-stone-600 leading-relaxed">${esc(f.a)}</div>
+        </div>`,
+        )
+        .join("")}
     </div>
+
   </div>
 </section>`;
-
-const footer = () => `
+      const footer = () => `
 <footer class="bg-[#0f0f0f] text-stone-300 pt-14 pb-8 px-4 md:px-8 border-t border-stone-800 text-xs sm:text-sm">
   <div class="max-w-6xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 pb-10">
@@ -572,10 +1067,10 @@ const footer = () => `
       <div class="md:col-span-4 space-y-3">
         <h4 class="text-white font-bold text-base">যোগাযোগ</h4>
         <ul class="space-y-2.5">
-          <li><a href="tel:${B.phoneHref}" class="flex items-center gap-2.5 hover:text-white">${icon('phone', 'w-4 h-4 text-[#e50914] shrink-0')}<span>${esc(B.phone)}</span></a></li>
-          <li><a href="${WA_LINK}" target="_blank" rel="noopener" class="flex items-center gap-2.5 hover:text-white">${wa('w-4 h-4 text-emerald-400')}<span>WhatsApp: ${esc(B.whatsappDisplay)}</span></a></li>
-          <li><a href="${B.website}" target="_blank" rel="noreferrer" class="flex items-center gap-2.5 hover:text-white">${icon('globe', 'w-4 h-4 text-cyan-400 shrink-0')}<span>www.${esc(B.domain)}</span></a></li>
-          <li class="flex items-center gap-2.5">${icon('pin', 'w-4 h-4 text-[#e50914] shrink-0')}<span>${esc(B.location)}</span></li>
+          <li><a href="tel:${B.phoneHref}" class="flex items-center gap-2.5 hover:text-white">${icon("phone", "w-4 h-4 text-[#e50914] shrink-0")}<span>${esc(B.phone)}</span></a></li>
+          <li><a href="${WA_LINK}" target="_blank" rel="noopener" class="flex items-center gap-2.5 hover:text-white">${wa("w-4 h-4 text-emerald-400")}<span>WhatsApp: ${esc(B.whatsappDisplay)}</span></a></li>
+          <li><a href="${B.website}" target="_blank" rel="noreferrer" class="flex items-center gap-2.5 hover:text-white">${icon("globe", "w-4 h-4 text-cyan-400 shrink-0")}<span>www.${esc(B.domain)}</span></a></li>
+          <li class="flex items-center gap-2.5">${icon("pin", "w-4 h-4 text-[#e50914] shrink-0")}<span>${esc(B.location)}</span></li>
         </ul>
       </div>
       <div class="md:col-span-3 space-y-3">
@@ -583,7 +1078,7 @@ const footer = () => `
         <ul class="space-y-2.5">
           <li><a href="#features" class="hover:text-white block">ফিচারসমূহ</a></li>
           <li><a href="#combo-list" class="hover:text-white block">প্যাকেজ ও মূল্য</a></li>
-          <li><button data-cta class="hover:text-white text-left cursor-pointer inline-flex items-center gap-2">${cart('w-4 h-4')}<span>অর্ডার করুন</span></button></li>
+          <li><button data-cta class="hover:text-white text-left cursor-pointer inline-flex items-center gap-2">${cart("w-4 h-4")}<span>অর্ডার করুন</span></button></li>
         </ul>
       </div>
     </div>
@@ -591,192 +1086,301 @@ const footer = () => `
   </div>
 </footer>`;
 
-const mobileBar = () => `
+      const mobileBar = () => `
 <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-stone-200 p-2.5 shadow-lg flex items-center gap-2">
-  <a href="tel:${B.phoneHref}" aria-label="কল করুন" class="btn-wa w-11 h-11 shrink-0 bg-stone-100 text-[#8b1515] rounded-lg flex items-center justify-center border border-stone-300">${icon('phone', 'w-5 h-5')}</a>
-  <a href="${WA_LINK}" target="_blank" rel="noopener" aria-label="WhatsApp" class="btn-wa wa-pulse w-11 h-11 shrink-0 bg-emerald-600 text-white rounded-lg flex items-center justify-center">${wa('w-6 h-6')}</a>
-  <button data-cta class="cta-pulse flex-1 py-3 px-4 bg-[#8b1515] text-white rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 shadow-sm cursor-pointer">${cart('w-4 h-4')}<span>অর্ডার করুন (${P.offerPrice} টাকা)</span></button>
+  <a href="tel:${B.phoneHref}" aria-label="কল করুন" class="btn-wa w-11 h-11 shrink-0 bg-stone-100 text-[#8b1515] rounded-lg flex items-center justify-center border border-stone-300">${icon("phone", "w-5 h-5")}</a>
+  <a href="${WA_LINK}" target="_blank" rel="noopener" aria-label="WhatsApp" class="btn-wa wa-pulse w-11 h-11 shrink-0 bg-emerald-600 text-white rounded-lg flex items-center justify-center">${wa("w-6 h-6")}</a>
+  <button type="button" id="bar-order" class="cta-pulse flex-1 py-3 px-4 bg-[#8b1515] text-white rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 shadow-sm cursor-pointer">${cart("w-4 h-4")}<span>অর্ডার করুন (<span id="bar-total">${P.offerPrice}</span> টাকা)</span></button>
 </div>`;
 
-/* =========================================================
+      /* =========================================================
    Render
    ========================================================= */
-$('#app').innerHTML = `
+      $("#app").innerHTML = `
 <div class="min-h-screen flex flex-col pb-16 md:pb-0">
   ${topBar()}${header()}
   <main class="flex-1">${hero()}${comboList()}${features()}${whyBuy()}${orderForm()}${reviews()}${faq()}</main>
   ${footer()}${mobileBar()}
 </div>`;
 
-/* =========================================================
+      /* =========================================================
    Interactions
    ========================================================= */
-const state = { qty: 1, area: DATA.delivery[0].id };
-const charge = () => DATA.delivery.find(d => d.id === state.area).charge;
-const areaLabel = () => DATA.delivery.find(d => d.id === state.area).label;
-const subtotal = () => P.offerPrice * state.qty;
-const grand = () => subtotal() + charge();
+      const state = { qty: 1, area: DATA.delivery[0].id };
+      const charge = () =>
+        DATA.delivery.find((d) => d.id === state.area).charge;
+      const areaLabel = () =>
+        DATA.delivery.find((d) => d.id === state.area).label;
+      const subtotal = () => P.offerPrice * state.qty;
+      const grand = () => subtotal() + charge();
 
-function updateSummary() {
-  $('#qty-val').textContent = state.qty;
-  $('#qty-minus').disabled = state.qty <= 1;
-  $('#pack-total').textContent = subtotal() + ' টাকা';
+    //   function updateSummary() {
+    //     $("#qty-val").textContent = state.qty;
+    //     $("#qty-minus").disabled = state.qty <= 1;
+    //     $("#pack-total").textContent = subtotal() + " টাকা";
 
-  $$('#delivery-opts label').forEach(l => {
+    //     $$("#delivery-opts label").forEach((l) => {
+    //       const on = l.dataset.area === state.area;
+    //       l.className =
+    //         "p-3.5 rounded-xl border-2 cursor-pointer flex items-center justify-between " +
+    //         (on
+    //           ? "border-[#8b1515] bg-red-50/40"
+    //           : "border-stone-200 hover:border-stone-300 bg-white");
+    //       $("input", l).checked = on;
+    //     });
+
+    //     $("#summary").innerHTML = `
+    // <div class="flex items-center gap-3 pb-2.5 border-b border-stone-200">
+    //   <div class="relative shrink-0">
+    //     <img src="${img("combo")}" alt="" referrerpolicy="no-referrer" class="w-12 h-12 rounded-lg object-cover border border-stone-300"/>
+    //     <span class="absolute -top-1.5 -right-1.5 bg-[#8b1515] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">${state.qty}</span>
+    //   </div>
+    //   <div class="flex-1 min-w-0">
+    //     <div class="font-bold text-stone-900 truncate">${esc(P.title)} (${esc(P.packLabel)})</div>
+    //     <div class="text-[11px] text-stone-500 truncate">${state.qty} টি প্যাকেজ (${P.offerPrice} × ${state.qty})</div>
+    //   </div>
+    //   <div class="font-extrabold text-[#8b1515] tabular-nums shrink-0">${subtotal()} টাকা</div>
+    // </div>
+    // <div class="space-y-2">
+    //   <div class="flex justify-between text-stone-600"><span>পণ্য মূল্য (${state.qty} টি কম্বো প্যাক):</span><span class="font-bold text-stone-900 tabular-nums">${subtotal()} টাকা</span></div>
+    //   <div class="flex justify-between text-stone-600"><span>ডেলিভারি চার্জ:</span><span class="font-bold text-stone-900 tabular-nums">${charge()} টাকা</span></div>
+    //   <div class="flex justify-between text-emerald-700 font-medium"><span>আপনার মোট সাশ্রয়:</span><span class="font-bold tabular-nums">${save * state.qty} টাকা</span></div>
+    //   <div class="flex justify-between text-base sm:text-lg font-extrabold text-[#8b1515] pt-2 border-t border-stone-200"><span>সর্বমোট প্রদেয় টাকা:</span><span class="tabular-nums">${grand()} টাকা</span></div>
+    // </div>`;
+
+    //     const btn = $("#submit-btn");
+    //     if (!btn.disabled)
+    //       btn.innerHTML = `${cart("w-5 h-5")}<span>অর্ডার কনফার্ম করুন (${grand()} টাকা)</span>`;
+    //   }
+
+      // CTA scroll
+      
+      function updateSummary() {
+    $$(".qty-val").forEach((el) => (el.textContent = state.qty));
+  $$(".qty-minus").forEach((el) => (el.disabled = state.qty <= 1));
+
+  $("#sum-badge").textContent = state.qty;
+  $("#sum-meta").textContent = `${DATA.combo.length}টি পণ্যের কম্বো · ×${state.qty}`;
+  $("#sum-line").textContent = "৳" + subtotal();
+  $("#sum-sub").textContent = "৳" + subtotal();
+  $("#sum-area").textContent = "(" + areaLabel() + ")";
+  $("#sum-charge").textContent = "৳" + charge();
+  $("#sum-total").textContent = "৳" + grand();
+
+   $$("#delivery-opts label").forEach((l) => {
     const on = l.dataset.area === state.area;
-    l.className = 'p-3.5 rounded-xl border-2 cursor-pointer flex items-center justify-between ' +
-      (on ? 'border-[#8b1515] bg-red-50/40' : 'border-stone-200 hover:border-stone-300 bg-white');
-    $('input', l).checked = on;
+    l.className =
+      "p-3.5 rounded-xl border cursor-pointer flex items-center justify-between gap-3 " +
+      (on
+        ? "border-[#8b1515] bg-red-50/60"
+        : "border-stone-200 bg-stone-50 hover:border-stone-300");
+    $("input", l).checked = on;
   });
 
-  $('#summary').innerHTML = `
-    <div class="flex items-center gap-3 pb-2.5 border-b border-stone-200">
-      <div class="relative shrink-0">
-        <img src="${img('combo')}" alt="" referrerpolicy="no-referrer" class="w-12 h-12 rounded-lg object-cover border border-stone-300"/>
-        <span class="absolute -top-1.5 -right-1.5 bg-[#8b1515] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">${state.qty}</span>
-      </div>
-      <div class="flex-1 min-w-0">
-        <div class="font-bold text-stone-900 truncate">${esc(P.title)} (${esc(P.packLabel)})</div>
-        <div class="text-[11px] text-stone-500 truncate">${state.qty} টি প্যাকেজ (${P.offerPrice} × ${state.qty})</div>
-      </div>
-      <div class="font-extrabold text-[#8b1515] tabular-nums shrink-0">${subtotal()} টাকা</div>
-    </div>
-    <div class="space-y-2">
-      <div class="flex justify-between text-stone-600"><span>পণ্য মূল্য (${state.qty} টি কম্বো প্যাক):</span><span class="font-bold text-stone-900 tabular-nums">${subtotal()} টাকা</span></div>
-      <div class="flex justify-between text-stone-600"><span>ডেলিভারি চার্জ:</span><span class="font-bold text-stone-900 tabular-nums">${charge()} টাকা</span></div>
-      <div class="flex justify-between text-emerald-700 font-medium"><span>আপনার মোট সাশ্রয়:</span><span class="font-bold tabular-nums">${save * state.qty} টাকা</span></div>
-      <div class="flex justify-between text-base sm:text-lg font-extrabold text-[#8b1515] pt-2 border-t border-stone-200"><span>সর্বমোট প্রদেয় টাকা:</span><span class="tabular-nums">${grand()} টাকা</span></div>
-    </div>`;
+  const bar = $("#bar-total");
+  if (bar) bar.textContent = grand();
 
-  const btn = $('#submit-btn');
-  if (!btn.disabled) btn.innerHTML = `${cart('w-5 h-5')}<span>অর্ডার কনফার্ম করুন (${grand()} টাকা)</span>`;
+  const btn = $("#submit-btn");
+  if (!btn.disabled)
+    btn.innerHTML = `${cart("w-5 h-5")}<span>অর্ডার করুন ৳ ${grand()}</span>`;
 }
+      
+      document.addEventListener("click", (e) => {
+        const cta = e.target.closest("[data-cta]");
+        if (cta) {
+          e.preventDefault();
+          scrollToOrder();
+        }
+      });
+      function scrollToOrder() {
+        $("#order-form-section").scrollIntoView({ behavior: "smooth" });
+      }
 
-// CTA scroll
-document.addEventListener('click', e => {
-  const cta = e.target.closest('[data-cta]');
-  if (cta) { e.preventDefault(); scrollToOrder(); }
-});
-function scrollToOrder() { $('#order-form-section').scrollIntoView({ behavior: 'smooth' }); }
+      // Gallery
+      $$("#thumbs [data-thumb]").forEach((btn) =>
+        btn.addEventListener("click", () => {
+          const i = +btn.dataset.thumb;
+          $("#main-img").src = img(DATA.gallery[i].image);
+          $$("#thumbs [data-thumb]").forEach((b, j) => {
+            b.className =
+              "relative aspect-square rounded-lg overflow-hidden border-2 p-0.5 bg-stone-50 cursor-pointer " +
+              (i === j
+                ? "border-[#8b1515]"
+                : "border-stone-200 opacity-80 hover:opacity-100");
+          });
+        }),
+      );
 
-// Gallery
-$$('#thumbs [data-thumb]').forEach(btn => btn.addEventListener('click', () => {
-  const i = +btn.dataset.thumb;
-  $('#main-img').src = img(DATA.gallery[i].image);
-  $$('#thumbs [data-thumb]').forEach((b, j) => {
-    b.className = 'relative aspect-square rounded-lg overflow-hidden border-2 p-0.5 bg-stone-50 cursor-pointer ' +
-      (i === j ? 'border-[#8b1515]' : 'border-stone-200 opacity-80 hover:opacity-100');
-  });
-}));
+      // Quantity & delivery
+            $$(".qty-minus").forEach((b) =>
+        b.addEventListener("click", () => {
+          if (state.qty > 1) {
+            state.qty--;
+            updateSummary();
+          }
+        }),
+      );
+      $$(".qty-plus").forEach((b) =>
+        b.addEventListener("click", () => {
+          state.qty++;
+          updateSummary();
+        }),
+      );
+      $$("#delivery-opts label").forEach((l) =>
+        l.addEventListener("click", () => {
+          state.area = l.dataset.area;
+          updateSummary();
+        }),
+      );
 
-// Quantity & delivery
-$('#qty-minus').addEventListener('click', () => { if (state.qty > 1) { state.qty--; updateSummary(); } });
-$('#qty-plus').addEventListener('click', () => { state.qty++; updateSummary(); });
-$$('#delivery-opts label').forEach(l => l.addEventListener('click', () => { state.area = l.dataset.area; updateSummary(); }));
+      // FAQ
+      $$(".faq-item").forEach((item) => {
+        const body = $(".faq-body", item),
+          chev = $(".faq-chev", item);
+        if (!body.classList.contains("hidden"))
+          chev.classList.add("rotate-180", "text-[#8b1515]");
+        $(".faq-btn", item).addEventListener("click", () => {
+          const open = !body.classList.contains("hidden");
+          $$(".faq-item").forEach((o) => {
+            $(".faq-body", o).classList.add("hidden");
+            $(".faq-chev", o).classList.remove("rotate-180", "text-[#8b1515]");
+          });
+          if (!open) {
+            body.classList.remove("hidden");
+            chev.classList.add("rotate-180", "text-[#8b1515]");
+          }
+        });
+      });
 
-// FAQ
-$$('.faq-item').forEach(item => {
-  const body = $('.faq-body', item), chev = $('.faq-chev', item);
-  if (!body.classList.contains('hidden')) chev.classList.add('rotate-180', 'text-[#8b1515]');
-  $('.faq-btn', item).addEventListener('click', () => {
-    const open = !body.classList.contains('hidden');
-    $$('.faq-item').forEach(o => { $('.faq-body', o).classList.add('hidden'); $('.faq-chev', o).classList.remove('rotate-180', 'text-[#8b1515]'); });
-    if (!open) { body.classList.remove('hidden'); chev.classList.add('rotate-180', 'text-[#8b1515]'); }
-  });
-});
+      /* ══ PHONE FIELD: শুধু ডিজিট, সর্বোচ্চ ১১ ডিজিট, লাইভ ভ্যালিডেশন ══ */
+      const PHONE_RE = /^01[3-9]\d{8}$/;
 
-/* ══ PHONE FIELD: শুধু ডিজিট, সর্বোচ্চ ১১ ডিজিট, লাইভ ভ্যালিডেশন ══ */
-const PHONE_RE = /^01[3-9]\d{8}$/;
+      function showPhoneError(msg) {
+        $("#phone-err").textContent = msg;
+        $("#phone-err").classList.remove("hidden");
+        $("#phone-group").classList.add("phone-error");
+        $("#f-phone").focus();
+        $("#phone-group").scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }
+      function clearPhoneError() {
+        $("#phone-err").classList.add("hidden");
+        $("#phone-group").classList.remove("phone-error");
+      }
 
-function showPhoneError(msg) {
-  $('#phone-err').textContent = msg;
-  $('#phone-err').classList.remove('hidden');
-  $('#phone-group').classList.add('phone-error');
-  $('#f-phone').focus();
-  $('#phone-group').scrollIntoView({ behavior: 'smooth', block: 'center' });
-}
-function clearPhoneError() {
-  $('#phone-err').classList.add('hidden');
-  $('#phone-group').classList.remove('phone-error');
-}
+      (function () {
+        const ph = $("#f-phone");
+        const BN = "০১২৩৪৫৬৭৮৯";
+        const clean = (v) =>
+          v
+            .replace(/[০-৯]/g, (d) => BN.indexOf(d)) // বাংলা ডিজিট → ইংরেজি
+            .replace(/\D/g, "") // ডিজিট ছাড়া সব বাদ
+            .replace(/^(88)?(?=01)/, "") // শুরুর 88 থাকলে বাদ
+            .slice(0, 11);
 
-(function () {
-  const ph = $('#f-phone');
-  const BN = '০১২৩৪৫৬৭৮৯';
-  const clean = v => v
-    .replace(/[০-৯]/g, d => BN.indexOf(d))   // বাংলা ডিজিট → ইংরেজি
-    .replace(/\D/g, '')                       // ডিজিট ছাড়া সব বাদ
-    .replace(/^(88)?(?=01)/, '')              // শুরুর 88 থাকলে বাদ
-    .slice(0, 11);
+        ph.addEventListener("input", function () {
+          const c = clean(this.value);
+          if (this.value !== c) this.value = c;
+          if (PHONE_RE.test(c)) clearPhoneError(); // সঠিক হলে error সরে যাবে
+        });
 
-  ph.addEventListener('input', function () {
-    const c = clean(this.value);
-    if (this.value !== c) this.value = c;
-    if (PHONE_RE.test(c)) clearPhoneError();  // সঠিক হলে error সরে যাবে
-  });
+        ph.addEventListener("keydown", function (e) {
+          if (e.ctrlKey || e.metaKey || e.key.length > 1) return;
+          if (!/[0-9]/.test(e.key)) e.preventDefault();
+        });
+      })();
 
-  ph.addEventListener('keydown', function (e) {
-    if (e.ctrlKey || e.metaKey || e.key.length > 1) return;
-    if (!/[0-9]/.test(e.key)) e.preventDefault();
-  });
-})();
 
-// Submit
-$('#order-form').addEventListener('submit', e => {
-  e.preventDefault();
-  const err = $('#form-error');
-  const fail = (msg, el) => { err.textContent = '⚠️ ' + msg; err.classList.remove('hidden'); el.focus(); };
-  err.classList.add('hidden');
+            // Mobile sticky button: order submit
+      $("#bar-order").addEventListener("click", () => {
+        $("#order-form").requestSubmit();
+      });
+      // Submit
+      $("#order-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const err = $("#form-error");
+        const fail = (msg, el) => {
+          err.textContent = "⚠️ " + msg;
+          err.classList.remove("hidden");
+          el.focus();
+        };
+        err.classList.add("hidden");
 
-  const name = $('#f-name').value.trim();
-  const phone = $('#f-phone').value.trim().replace(/\D/g, '');
-  const address = $('#f-addr').value.trim();
+        const name = $("#f-name").value.trim();
+        const phone = $("#f-phone").value.trim().replace(/\D/g, "");
+        const address = $("#f-addr").value.trim();
 
-  if (!name) return fail('অনুগ্রহ করে আপনার পুরো নাম লিখুন', $('#f-name'));
-  if (!phone) return showPhoneError('আপনার ফোন নাম্বারটি প্রয়োজন।');
-  if (!PHONE_RE.test(phone)) return showPhoneError('আপনার সঠিক ১১ সংখ্যার ফোন নাম্বারটি প্রয়োজন (01XXXXXXXXX)।');
-  clearPhoneError();
-  if (address.length < 8) return fail('অনুগ্রহ করে সম্পূর্ণ ঠিকানা দিন (জেলা, থানা, এলাকা ও বাসা নং)', $('#f-addr'));
+        if (!name)
+          return fail("অনুগ্রহ করে আপনার পুরো নাম লিখুন", $("#f-name"));
+        if (!phone) return showPhoneError("আপনার ফোন নাম্বারটি প্রয়োজন।");
+        if (!PHONE_RE.test(phone))
+          return showPhoneError(
+            "আপনার সঠিক ১১ সংখ্যার ফোন নাম্বারটি প্রয়োজন (01XXXXXXXXX)।",
+          );
+        clearPhoneError();
+        if (address.length < 8)
+          return fail(
+            "অনুগ্রহ করে সম্পূর্ণ ঠিকানা দিন (জেলা, থানা, এলাকা ও বাসা নং)",
+            $("#f-addr"),
+          );
 
-  const btn = $('#submit-btn');
-  btn.disabled = true;
-  btn.innerHTML = '<span>অর্ডার প্রসেস হচ্ছে...</span>';
+        // ---- order hoye gelo: shathe shathe modal ----
+        const orderId = "PRD-" + Math.floor(100000 + Math.random() * 900000);
+        const total = grand();
+        const qty = state.qty;
+        const area = areaLabel();
+        const waUrl =
+          `https://wa.me/${B.whatsapp}?text=` +
+          encodeURIComponent(
+            `আসসালামু আলাইকুম ${B.domain}, আমি ${P.title} (${qty}টি কম্বো) অর্ডার করেছি। অর্ডার আইডি: ${orderId}, মোট বিল: ৳${total}`,
+          );
 
-  setTimeout(() => {
-    const orderId = 'PRD-' + Math.floor(100000 + Math.random() * 900000);
-    const total = grand();
-    const wa = `https://wa.me/${B.whatsapp}?text=` + encodeURIComponent(
-      `আসসালামু আলাইকুম ${B.domain}, আমি ${P.title} (${state.qty}টি কম্বো) অর্ডার করেছি। অর্ডার আইডি: ${orderId}, মোট বিল: ৳${total}`);
-
-    $('#order-box').innerHTML = `
-      <div class="border-2 border-emerald-500 rounded-2xl p-6 sm:p-10 text-center space-y-5">
-        <div class="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto">${icon('package', 'w-8 h-8')}</div>
+        const modal = document.createElement("div");
+        modal.id = "order-modal";
+        modal.className =
+          "fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm overflow-y-auto";
+        modal.innerHTML = `
+      <div class="modal-card relative w-full max-w-md bg-white rounded-3xl p-6 sm:p-8 text-center space-y-5 my-auto">
+        <div class="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto">${icon("check", "w-8 h-8")}</div>
         <div class="space-y-1">
           <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest">অর্ডার সফল হয়েছে!</span>
-          <h3 class="text-2xl font-bold text-stone-900">ধন্যবাদ, ${esc(name)}!</h3>
+          <h3 class="text-2xl font-extrabold text-stone-900">ধন্যবাদ, ${esc(name)}!</h3>
           <p class="text-sm text-stone-600">আপনার <strong>${esc(P.title)}</strong> অর্ডারটি গৃহীত হয়েছে। শীঘ্রই আমাদের টিম ফোন করে নিশ্চিত করবে।</p>
         </div>
-        <div class="max-w-md mx-auto bg-stone-50 border border-stone-200 rounded-xl p-4 text-left text-xs sm:text-sm space-y-2">
+        <div class="bg-stone-50 border border-stone-200 rounded-xl p-4 text-left text-xs sm:text-sm space-y-2">
           <div class="flex items-center gap-3 pb-3 border-b border-stone-200">
-            <img src="${img('combo')}" alt="" referrerpolicy="no-referrer" class="w-12 h-12 rounded-lg object-cover border border-stone-300 shrink-0"/>
-            <div><div class="font-bold text-stone-900">${esc(P.title)} (${esc(P.packLabel)})</div><div class="text-[11px] text-stone-500">${state.qty} টি কম্বো প্যাকেজ</div></div>
+            <img src="${img("combo")}" alt="" referrerpolicy="no-referrer" class="w-12 h-12 rounded-lg object-cover border border-stone-300 shrink-0"/>
+            <div><div class="font-bold text-stone-900">${esc(P.title)} (${esc(P.packLabel)})</div><div class="text-[11px] text-stone-500">${qty} টি কম্বো প্যাকেজ</div></div>
           </div>
           <div class="flex justify-between py-1 border-b border-stone-200"><span class="text-stone-500">অর্ডার আইডি:</span><span class="font-bold tabular-nums">${orderId}</span></div>
-          <div class="flex justify-between py-1 border-b border-stone-200"><span class="text-stone-500">মোবাইল নাম্বার:</span><span class="font-bold">+88${esc(phone)}</span></div>
+          <div class="flex justify-between py-1 border-b border-stone-200"><span class="text-stone-500">মোবাইল:</span><span class="font-bold">+88${esc(phone)}</span></div>
           <div class="flex justify-between py-1 border-b border-stone-200 gap-4"><span class="text-stone-500 shrink-0">ঠিকানা:</span><span class="font-semibold text-right">${esc(address)}</span></div>
-          <div class="flex justify-between py-1 border-b border-stone-200"><span class="text-stone-500">প্যাকেজ সংখ্যা:</span><span class="font-bold">${state.qty} টি কম্বো (${esc(areaLabel())})</span></div>
-          <div class="flex justify-between py-1 text-base font-bold text-[#8b1515]"><span>সর্বমোট প্রদেয় টাকা:</span><span class="tabular-nums">৳ ${total}</span></div>
+          <div class="flex justify-between py-1 border-b border-stone-200"><span class="text-stone-500">ডেলিভারি:</span><span class="font-bold">${esc(area)}</span></div>
+          <div class="flex justify-between py-1 text-base font-bold text-[#8b1515]"><span>সর্বমোট:</span><span class="tabular-nums">৳ ${total}</span></div>
         </div>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-          <a href="${wa}" target="_blank" rel="noreferrer" class="btn-wa wa-pulse w-full sm:w-auto px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg text-xs sm:text-sm flex items-center justify-center gap-2">${wa('w-4 h-4')}<span>WhatsApp-এ কনফার্ম করুন</span></a>
-          <button onclick="location.reload()" class="w-full sm:w-auto px-5 py-2.5 bg-stone-200 hover:bg-stone-300 text-stone-800 font-semibold rounded-lg text-xs sm:text-sm cursor-pointer">নতুন আরেকটি অর্ডার</button>
+        <div class="flex flex-col gap-2.5">
+          <button type="button" id="modal-close" class="w-full px-5 py-3 bg-stone-100 hover:bg-stone-200 text-stone-800 font-semibold rounded-xl text-sm cursor-pointer">বন্ধ করুন</button>
         </div>
       </div>`;
-    scrollToOrder();
-  }, 600);
-});
+        document.body.appendChild(modal);
+        document.body.style.overflow = "hidden";
 
-updateSummary();
-</script>
-</body>
+        const closeModal = () => {
+          modal.remove();
+          document.body.style.overflow = "";
+          // form reset
+          $("#order-form").reset();
+          state.qty = 1;
+          updateSummary();
+        };
+        $("#modal-close", modal).addEventListener("click", closeModal);
+        modal.addEventListener("click", (ev) => {
+          if (ev.target === modal) closeModal();
+        });
+      });
+      updateSummary();
+    </script>
+  </body>
 </html>
